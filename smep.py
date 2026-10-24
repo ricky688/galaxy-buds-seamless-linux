@@ -1,6 +1,6 @@
 """SMEP format 3 protocol implementation.
 
-Only unfragmented packets are supported. See RESEARCH.md for protocol specification and limits.
+Only unfragmented packets are supported.
 """
 
 import binascii
