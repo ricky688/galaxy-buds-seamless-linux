@@ -4,7 +4,12 @@ Reconstructed from Samsung Settings 8.0.13.0 Windows binaries and tested with Ga
 
 ## Run
 
-Requires BlueZ, Python 3, `dbus-python`, PyGObject, `pactl` and `parec` (PulseAudio utilities, also usable with PipeWire). These are installed on the investigated machine. Run as your desktop user with access to system D-Bus and your audio session, without sudo.
+Requires BlueZ, Python 3, `dbus-python`, PyGObject, `pactl` and `parec` (PulseAudio utilities, also usable with PipeWire). Run as your desktop user with access to system D-Bus and your audio session, without sudo.
+
+> [!IMPORTANT]
+> **Manual Connection Requirement Upon Power-On / Taking Buds Out of Case:**  
+> When the Galaxy Buds are first turned on or taken out of their charging case, they typically establish an initial connection with your primary mobile device (e.g., Galaxy phone). Because Linux does not participate in Samsung's proprietary cloud-synced BLE wake-up orchestration, you may need to initiate the initial connection on Linux (via `bluetoothctl connect AA:BB:CC:DD:EE:FF` or desktop Bluetooth settings), or run the worker once the Buds are awake.  
+> Once the initial dual connection is established, all subsequent audio handoffs between Linux and the phone operate completely seamlessly and automatically through native protocol requests without manual reconnection.
 
 The Buds must already be paired and awake. Start this command directly: it opens SMEP and announces native MDE support before connecting the audio profile. A generic Bluetooth Connect first can disconnect the phone’s audio profiles. Close any other application using the same SMEP profile. Select your preferred non-Buds output before starting if multiple fallback outputs exist; the worker creates its own private waiting output.
 
