@@ -9,20 +9,59 @@ import sys
 import audio
 
 
+def cleanup_orphaned_null_sinks(address=None):
+    """Clean up any stale or orphaned buds_switch_wait null sinks."""
+    try:
+        prefix = ("buds_switch_wait_" + address.replace(":", "").upper()) if address else "buds_switch_wait_"
+        modules = json.loads(audio.pactl("-f", "json", "list", "modules"))
+        for mod in modules:
+            if mod.get("name") == "module-null-sink":
+                props = mod.get("properties", {})
+                args = mod.get("argument", "")
+                if prefix.lower() in args.lower() or prefix.lower() in str(props).lower():
+                    try:
+                        audio.pactl("unload-module", str(mod["index"]))
+                    except Exception:
+                        pass
+        # If default sink is pointing to a buds_switch_wait sink, revert to physical ALSA sink
+        default_sink = audio.pactl("get-default-sink").strip()
+        if "buds_switch_wait" in default_sink:
+            sinks = json.loads(audio.pactl("-f", "json", "list", "sinks"))
+            physical = [s for s in sinks if s.get("properties", {}).get("device.api") == "alsa"]
+            if not physical:
+                physical = [s for s in sinks if "buds_switch_wait" not in s.get("name", "") and "null" not in s.get("name", "")]
+            if physical:
+                audio.pactl("set-default-sink", physical[0]["name"])
+    except Exception:
+        pass
+
+
 class Endpoints:
     def __init__(self, address):
+        cleanup_orphaned_null_sinks(address)
         self.sinks = json.loads(audio.pactl("-f", "json", "list", "sinks"))
         buds = [s for s in self.sinks if s.get("properties", {}).get("api.bluez5.address", "").upper() == address.upper()]
         if len(buds) != 1:
             raise RuntimeError("No unique Buds audio endpoint")
         self.buds = buds[0]
-        self.original_default = audio.pactl("get-default-sink").strip()
-        fallback = [s for s in self.sinks if s["name"] == self.original_default and s != self.buds]
+
+        raw_default = audio.pactl("get-default-sink").strip()
+        if "buds_switch_wait" in raw_default:
+            physical = [s for s in self.sinks if s.get("properties", {}).get("device.api") == "alsa"]
+            if not physical:
+                physical = [s for s in self.sinks if s != self.buds and "buds_switch_wait" not in s.get("name", "")]
+            raw_default = physical[0]["name"] if physical else raw_default
+        self.original_default = raw_default
+
+        fallback = [s for s in self.sinks if s["name"] == self.original_default and s != self.buds and "buds_switch_wait" not in s.get("name", "")]
         if not fallback:
             fallback = [s for s in self.sinks if s.get("properties", {}).get("device.api") == "alsa"]
-        if len(fallback) != 1:
+        if not fallback:
+            fallback = [s for s in self.sinks if s != self.buds and "buds_switch_wait" not in s.get("name", "")]
+        if not fallback:
             raise RuntimeError("Select your preferred non-Buds audio output before starting seamless mode")
-        self.fallback = fallback[0]
+        self.physical_sink = fallback[0]
+        self.fallback = self.physical_sink
         self.managed = {self.buds["index"], self.fallback["index"]}
         self.waiting_module = None
         self.original_mute = self.fallback["mute"]
@@ -35,7 +74,7 @@ class Endpoints:
 
     def __enter__(self):
         try:
-            name = "buds_switch_wait_" + self.buds["properties"]["api.bluez5.address"].replace(":", "")
+            name = "buds_switch_wait_" + self.buds["properties"]["api.bluez5.address"].replace(":", "").upper()
             self.waiting_module = audio.pactl("load-module", "module-null-sink", "sink_name=" + name,
                                                "sink_properties=device.description=BudsSwitchWait").strip()
             self.fallback = next(s for s in json.loads(audio.pactl("-f", "json", "list", "sinks"))
@@ -109,7 +148,7 @@ class Endpoints:
             return  # A private null sink has no speaker; leave its meter unmuted.
         # Preserve an existing user mute when the policy says "unmute".
         wanted = bool(muted or self.original_mute)
-        audio.pactl("set-sink-mute", self.fallback["name"], "1" if wanted else "0")
+        audio.pactl("set-sink-mute", self.physical_sink["name"], "1" if wanted else "0")
         self.last_mute = wanted
 
     def suspend_buds(self, suspended):
@@ -130,22 +169,37 @@ class Endpoints:
 
     def __exit__(self, *exception):
         self.stop_meter()
-        # Undo only changes still owned by this process; do not overwrite later user choices.
-        sinks = json.loads(audio.pactl("-f", "json", "list", "sinks"))
-        names = {s["index"]: s["name"] for s in sinks}
-        current = next((s for s in sinks if s["name"] == self.fallback["name"]), None)
-        if current and self.last_mute is not None and current["mute"] == self.last_mute:
-            audio.pactl("set-sink-mute", current["name"], "1" if self.original_mute else "0")
-        if audio.pactl("get-default-sink").strip() == self.last_default and self.original_default in names.values():
-            audio.pactl("set-default-sink", self.original_default)
-        for item in json.loads(audio.pactl("-f", "json", "list", "sink-inputs")):
-            original, last = self.moves.get(item["index"], (None, None))
-            if item["sink"] == last and original in names:
-                audio.pactl("move-sink-input", str(item["index"]), names[original])
-            elif self.waiting_module is not None and item["sink"] == self.fallback["index"] and self.original_default in names.values():
-                audio.pactl("move-sink-input", str(item["index"]), self.original_default)
-        if self.suspended_by_us and self.buds["index"] in names:
-            self.suspend_buds(False)
+        try:
+            sinks = json.loads(audio.pactl("-f", "json", "list", "sinks"))
+            names = {s["index"]: s["name"] for s in sinks}
+            target_default = self.original_default if self.original_default in names.values() else self.physical_sink["name"]
+
+            # 1. Always restore default sink to physical output
+            audio.pactl("set-default-sink", target_default)
+            self.last_default = target_default
+
+            # 2. Unmute physical output if it was muted
+            current = next((s for s in sinks if s["name"] == self.physical_sink["name"]), None)
+            if current:
+                audio.pactl("set-sink-mute", current["name"], "1" if self.original_mute else "0")
+
+            # 3. Move all streams from BudsSwitchWait (and Buds) to physical output
+            for item in json.loads(audio.pactl("-f", "json", "list", "sink-inputs")):
+                if self.waiting_module is not None and item["sink"] == self.fallback["index"]:
+                    audio.pactl("move-sink-input", str(item["index"]), target_default)
+                elif item["sink"] == self.buds["index"]:
+                    audio.pactl("move-sink-input", str(item["index"]), target_default)
+
+            # 4. Resume buds if suspended
+            if self.suspended_by_us and self.buds["index"] in names:
+                self.suspend_buds(False)
+        except Exception:
+            pass
+
+        # 5. Always unload the BudsSwitchWait null-sink module
         if self.waiting_module is not None:
-            audio.pactl("unload-module", self.waiting_module)
+            try:
+                audio.pactl("unload-module", self.waiting_module)
+            except Exception:
+                pass
             self.waiting_module = None

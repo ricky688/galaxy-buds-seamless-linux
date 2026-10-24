@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experimental native SMEP seamless switching for already paired Galaxy Buds."""
+"""Native SMEP seamless switching for already paired Galaxy Buds."""
 
 import argparse
 import json
@@ -17,7 +17,7 @@ from gi.repository import GLib
 
 import smep
 import audio
-from native_audio import Endpoints
+from native_audio import Endpoints, cleanup_orphaned_null_sinks
 from native_policy import Policy
 
 
@@ -95,39 +95,37 @@ class Profile(dbus.service.Object):
             GLib.timeout_add_seconds(self.connect_delay, self.connect_control)
             self.connect_delay = min(self.connect_delay * 2, 15)
 
-    def recover(self, endpoints):
-        # Keep the private output alive so retrying cannot restore speaker playback.
+    def wait_for_connection(self):
+        """Wait for Buds to reconnect. While waiting, no null sink is used and physical audio is active."""
         self.on_state = None
-        endpoints.select(endpoints.fallback)
-        endpoints.monitor(endpoints.fallback)
-        delay = 1
-        while not self.closed.is_set():
-            if self.sock:
+        if self.sock:
+            try:
+                self.sock.shutdown(socket.SHUT_RDWR)
+            except OSError:
+                pass
+            try:
                 self.sock.close()
-                self.sock = None
-            self.connected.clear()
-            self.buffer.clear()
-            self.sequence = 0
+            except OSError:
+                pass
+            self.sock = None
+        self.connected.clear()
+        self.buffer.clear()
+        self.sequence = 0
+        delay = 2
+        while not self.closed.is_set():
             emit("reconnect-wait", seconds=delay)
             if self.closed.wait(delay):
-                return None
+                return False
             GLib.idle_add(self.connect_control)
-            deadline = time.monotonic() + 35
+            deadline = time.monotonic() + 30
             while not self.closed.is_set() and not self.connected.is_set() and time.monotonic() < deadline:
-                self.closed.wait(0.1)
+                self.closed.wait(0.2)
             if self.closed.is_set():
-                return None
+                return False
             if self.connected.is_set():
-                try:
-                    self.sock.settimeout(0.05)
-                    ready = self.prepare_audio()
-                    endpoints.refresh_buds(self.address)
-                    emit("control-recovered", state=ready)
-                    return ready
-                except (OSError, dbus.DBusException, RuntimeError) as error:
-                    emit("reconnect-error", message=str(error))
+                return True
             delay = min(delay * 2, 15)
-        return None
+        return False
 
     def send(self, raw):
         self.sock.sendall(raw)
@@ -213,63 +211,73 @@ class Profile(dbus.service.Object):
                 self.closed.wait(0.2)
 
     def seamless(self):
-        policy = Policy()
-        self.sock.settimeout(0.05)
-        ready = self.prepare_audio()
-        with Endpoints(self.address) as endpoints:
-            def apply(action):
-                if action is None:
-                    return
-                emit("native-action", action=action)
-                if action == "request":
-                    self.send(smep.switch_request(self.sequence))
-                    # Start A2DP alongside the request instead of waiting for its acknowledgement.
-                    endpoints.suspend_buds(False)
-                    endpoints.select(endpoints.buds)
-                    emit("audio-primed")
-                elif action == "buds":
-                    endpoints.select(endpoints.buds)
-                    endpoints.suspend_buds(False)
-                    endpoints.monitor(endpoints.buds)
-                else:
-                    endpoints.mute_fallback(True)
-                    endpoints.select(endpoints.fallback)
-                    endpoints.monitor(endpoints.fallback)
-                    if action == "standby":
-                        endpoints.suspend_buds(True)
-                    elif action == "fallback-held":
-                        emit("handoff-failed", message="Request rejected or timed out; local audio remains muted")
+        while not self.closed.is_set():
+            try:
+                self.sock.settimeout(0.05)
+                ready = self.prepare_audio()
+            except Exception as error:
+                emit("prepare-audio-error", message=str(error))
+                if not self.wait_for_connection():
+                    break
+                continue
 
-            def changed(status):
-                previous = policy.status
-                apply(policy.state(status, time.monotonic()))
-                if previous and previous["role"] == 0 and status["role"] == 1:
-                    # Restore the parked A2DP profile without requesting foreground audio.
+            policy = Policy()
+            with Endpoints(self.address) as endpoints:
+                def apply(action):
+                    if action is None:
+                        return
+                    emit("native-action", action=action)
+                    if action == "request":
+                        self.send(smep.switch_request(self.sequence))
+                        # Start A2DP alongside the request instead of waiting for its acknowledgement.
+                        endpoints.suspend_buds(False)
+                        endpoints.select(endpoints.buds)
+                        emit("audio-primed")
+                    elif action == "buds":
+                        endpoints.select(endpoints.buds)
+                        endpoints.suspend_buds(False)
+                        endpoints.monitor(endpoints.buds)
+                    else:
+                        endpoints.mute_fallback(True)
+                        endpoints.select(endpoints.fallback)
+                        endpoints.monitor(endpoints.fallback)
+                        if action == "standby":
+                            endpoints.suspend_buds(True)
+                        elif action == "fallback-held":
+                            emit("handoff-failed", message="Request rejected or timed out; local audio remains muted")
+
+                def changed(status):
+                    previous = policy.status
+                    apply(policy.state(status, time.monotonic()))
+                    if previous and previous["role"] == 0 and status["role"] == 1:
+                        # Restore the parked A2DP profile without requesting foreground audio.
+                        try:
+                            self.connect_audio()
+                            emit("background-audio-connected")
+                        except dbus.DBusException as error:
+                            emit("background-audio-error", message=str(error))
+
+                self.on_state = changed
+                changed(ready)
+                emit("native-ready", fallback=endpoints.fallback["name"], state=ready)
+                while not self.closed.is_set():
                     try:
-                        self.connect_audio()
-                        emit("background-audio-connected")
-                    except dbus.DBusException as error:
-                        emit("background-audio-error", message=str(error))
-
-            self.on_state = changed
-            changed(ready)
-            emit("native-ready", fallback=endpoints.fallback["name"], state=ready)
-            while not self.closed.is_set():
-                try:
-                    self.receive(0.05)
-                    now = time.monotonic()
-                    apply(policy.tick(now))
-                    peak = endpoints.peak()
-                    if peak is not None:
-                        apply(policy.peak(peak, now))
-                except (OSError, dbus.DBusException) as error:
-                    emit("control-lost", message=str(error))
-                    ready = self.recover(endpoints)
-                    if ready is None:
+                        self.receive(0.05)
+                        now = time.monotonic()
+                        apply(policy.tick(now))
+                        peak = endpoints.peak()
+                        if peak is not None:
+                            apply(policy.peak(peak, now))
+                    except (OSError, dbus.DBusException, RuntimeError) as error:
+                        emit("control-lost", message=str(error))
                         break
-                    policy = Policy()
-                    self.on_state = changed
-                    changed(ready)
+
+            # with Endpoints exited:
+            # BudsSwitchWait null-sink is unloaded and default sink is restored to physical speaker!
+            self.on_state = None
+            if not self.closed.is_set():
+                if not self.wait_for_connection():
+                    break
 
 
 def main():
@@ -279,6 +287,10 @@ def main():
     args = parser.parse_args()
     if not re.fullmatch(r"(?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}", args.address):
         parser.error("Expected a Bluetooth MAC address")
+
+    # Clean up any leftover null sinks from prior ungraceful exits
+    cleanup_orphaned_null_sinks(args.address)
+
     dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
     bus = dbus.SystemBus()
     objects = dbus.Interface(bus.get_object("org.bluez", "/"),
@@ -330,6 +342,7 @@ def main():
         if profile.sock:
             profile.sock.close()
         manager.UnregisterProfile(profile.object_path)
+        cleanup_orphaned_null_sinks(args.address)
     return profile.result
 
 
