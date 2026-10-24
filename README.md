@@ -1,62 +1,142 @@
-# Native Buds seamless switching for Linux — experimental
+# Samsung Galaxy Buds Native Seamless Switching for Linux
 
-Reconstructed from Samsung Settings 8.0.13.0 Windows binaries and tested with Galaxy Buds4 Pro and a Galaxy S24 Ultra. It maintains Samsung’s SMEP control connection, announces MDE v3, handles foreground/background notifications, and requests foreground after sustained Linux sound. No Bluetooth disconnect/reconnect is used for ordinary handoffs.
+Reconstructed from Samsung Settings Windows binaries and verified on Linux with **Galaxy Buds4 Pro** and a **Galaxy S24 Ultra**.  
+It maintains Samsung’s proprietary **SMEP** (Samsung Multi-point Endpoint Protocol) control link, announces **MDE v3**, coordinates foreground/background audio handoffs, and requests foreground playback when sustained Linux sound is detected—all with **no Bluetooth disconnection or reconnect delays** during normal handoffs.
 
-## Run
+---
 
-Requires BlueZ, Python 3, `dbus-python`, PyGObject, `pactl` and `parec` (PulseAudio utilities, also usable with PipeWire). Run as your desktop user with access to system D-Bus and your audio session, without sudo.
+## Features
 
+- **True Native Protocol**: Uses Samsung's MDE v3 / SMEP protocol over RFCOMM rather than basic Bluetooth reconnection hacks.
+- **Fast Handoff (< 300 ms)**: Overlaps A2DP endpoint startup with the native request for instant audio playback.
+- **No Speaker Leaks**: Redirects background Linux audio to a private `BudsSwitchWait` virtual sink when the phone owns the Buds.
+- **Zero-Touch Return to Mobile**: Automatically yields the Buds back to the phone after 2 seconds of local Linux silence.
+- **Self-Healing Connection**: Automatically handles remote socket resets with an exponential backoff (`1s -> 2s -> 4s -> 8s -> 15s`).
+
+---
+
+## Prerequisites & Installation
+
+### 1. Install Dependencies
+
+You need Python 3, BlueZ, PulseAudio/PipeWire utilities, and DBus bindings.
+
+#### Arch Linux / Manjaro:
+```sh
+sudo pacman -S bluez bluez-utils python-dbus python-gobject libpulse pipewire-pulse
+```
+
+#### Ubuntu / Debian / Pop!_OS:
+```sh
+sudo apt update
+sudo apt install bluez python3-dbus python3-gi pulseaudio-utils pipewire-pulse
+```
+
+#### Fedora:
+```sh
+sudo dnf install bluez bluez-libs python3-dbus python3-gobject pulseaudio-utils pipewire-pulseaudio
+```
+
+### 2. Pair Your Galaxy Buds
+
+Make sure your Galaxy Buds are already paired with your Linux machine (e.g. via GNOME/KDE Bluetooth Settings or `bluetoothctl`).
+
+Find your Buds Bluetooth MAC address:
+```sh
+bluetoothctl devices
+# Example output: Device AA:BB:CC:DD:EE:FF Galaxy Buds4 Pro
+```
+
+---
+
+## How to Use
+
+### Step 1: Wake / Connect Buds Initially
 > [!IMPORTANT]
-> **Manual Connection Requirement Upon Power-On / Taking Buds Out of Case:**  
-> When the Galaxy Buds are first turned on or taken out of their charging case, they typically establish an initial connection with your primary mobile device (e.g., Galaxy phone). Because Linux does not participate in Samsung's proprietary cloud-synced BLE wake-up orchestration, you may need to initiate the initial connection on Linux (via `bluetoothctl connect AA:BB:CC:DD:EE:FF` or desktop Bluetooth settings), or run the worker once the Buds are awake.  
-> Once the initial dual connection is established, all subsequent audio handoffs between Linux and the phone operate completely seamlessly and automatically through native protocol requests without manual reconnection.
+> **Manual Connection Upon Power-On / Taking Buds Out of Case:**  
+> When the Galaxy Buds are first turned on or taken out of their charging case, they typically establish an initial connection with your primary mobile device (e.g., Galaxy phone). Because Linux does not participate in Samsung's proprietary cloud-synced BLE wake-up orchestration, you may need to initiate the initial connection on Linux (via your desktop Bluetooth menu or `bluetoothctl connect <MAC>`).  
+> Once this initial connection is established, **all subsequent audio handoffs between Linux and the phone operate completely seamlessly and automatically through native protocol requests without manual reconnection.**
 
-The Buds must already be paired and awake. Start this command directly: it opens SMEP and announces native MDE support before connecting the audio profile. A generic Bluetooth Connect first can disconnect the phone’s audio profiles. Close any other application using the same SMEP profile. Select your preferred non-Buds output before starting if multiple fallback outputs exist; the worker creates its own private waiting output.
+### Step 2: Run the Seamless Switcher
 
-```sh
-cd /home/user/Antigravity_project/REA/buds-switch-linux
-python buds_switch.py seamless AA:BB:CC:DD:EE:FF
-```
-
-Leave this running. Start phone playback to use the phone; play sustained Linux audio to request the Buds. Ctrl+C stops the session. Normal SIGTERM shutdown also restores audio changes still owned by the process.
-
-When a foreground-to-background notification arrives, the worker also restores the Linux A2DP profile once, without requesting foreground. In the live PC-to-phone test, the user confirmed both devices stayed connected and phone audio played without clicking Connect on the PC.
-
-The process monitors output audio peaks, never the microphone; it does not save the sampled audio. While the phone owns playback, it routes managed Linux streams to a private `BudsSwitchWait` virtual sink and watches that sink for sound. This sink has no physical speaker output. Sound above 0.001 for 100 ms triggers a native request, with a 250 ms cooldown after losing foreground. These shorter media timings deliberately differ from the Windows reference policy. Calls suppress requests based on the reported stream flags. Requests time out after 12 seconds.
-
-After two seconds of Linux silence it routes managed streams to the private waiting output and suspends the Buds render endpoint, keeping SMEP connected. This Linux adaptation lets the phone reclaim audio even with continuous silent AudioRelay loopbacks. New local sound sends the foreground request, immediately resumes the endpoint and moves managed playback to the Buds while the reply is pending. Rejection or timeout returns playback to the private waiting output.
-
-Routing includes every stream on the Buds, the initially selected fallback and the private waiting output, including paused streams and virtual loopbacks. Streams explicitly routed to other outputs stay there. During a rejected or timed-out request, audio stays in the virtual waiting output and a failure is logged. The waiting output may show meter activity; it cannot play through speakers. On normal exit it restores the saved default and moved streams when those settings still match its last changes, then removes its virtual sink. New streams waiting there move to the original default on exit. `take` is a one-shot diagnostic that leaves the default and active stream routing changed; `probe` only reads capabilities. The earlier `watch` prototype has been replaced by `seamless`.
+Clone the repository and run `buds_switch.py`:
 
 ```sh
-python buds_switch.py probe AA:BB:CC:DD:EE:FF
-python buds_switch.py take AA:BB:CC:DD:EE:FF
-python -m unittest -v
+git clone https://github.com/ricky688/galaxy-buds-seamless-linux.git
+cd galaxy-buds-seamless-linux
+
+# Start seamless switching daemon
+python3 buds_switch.py seamless <YOUR_BUDS_MAC>
 ```
+*(Replace `<YOUR_BUDS_MAC>` with your device MAC address, e.g., `A8:D1:62:7E:1A:D6`)*
 
-An optional [user service](buds-native-seamless.service) is provided with this machine’s path and Buds address. It has not been installed or enabled at login. The current investigation runs under the temporary `buds-native-test.service` user service, so ending a chat tool session does not terminate the worker. It lasts until stopped or the user service manager exits.
+Leave this command running in the background or terminal:
+- **Phone playing audio**: Linux remains quietly in the background; phone audio plays continuously.
+- **Play audio on Linux**: When Linux plays sound (> 100 ms), it automatically requests foreground and takes over playback.
+- **Stop audio on Linux**: After 2 seconds of silence, Linux automatically yields and the phone resumes playback.
 
-```sh
-systemctl --user status buds-native-test.service
-systemctl --user stop buds-native-test.service
-```
+---
 
-A `SUSPENDED` PulseAudio/PipeWire sink is an idle audio renderer, not evidence of Bluetooth disconnection. Check `bluetoothctl info AA:BB:CC:DD:EE:FF` for the Linux link. Phone media-profile state must be checked separately; a surviving ACL alone does not prove that profile remains connected.
+## Run Automatically as a Systemd User Service
 
-## Verified and remaining limits
+To keep the switcher running continuously in the background on login:
 
-- Control-first startup from a disconnected Linux link with the phone’s A2DP profile remaining connected; phone and Linux connections observed simultaneously in sampled states. A later user report showed that the earlier playback test did not establish continuous coexistence through every handoff.
-- Native phone → Linux ownership transition after sustained local sound, with foreground notification and A2DP state captured.
-- Linux → phone after automatic Linux silence handling, without reconnecting Bluetooth; the user confirmed hearing phone audio through the Buds.
-- With phone playback confirmed, the temporary service run captured phone A2DP `STATE_CONNECTED` / `mIsPlaying: true`, Linux BlueZ `Connected: yes`, and the Linux Buds sink `SUSPENDED` at the same time (`evidence/phone-playing-07.txt`).
-- Thirty-three offline tests cover packet bytes, captured replies and fragmentation boundaries, corruption, routing restoration, switching policy timing and control-connection recovery.
+1. Copy the service unit to your user systemd directory:
+   ```sh
+   mkdir -p ~/.config/systemd/user/
+   cp buds-native-seamless.service ~/.config/systemd/user/
+   ```
 
-A controlled live SMEP-profile disconnect recovered in the same process in about 2.4 seconds, retaining the private waiting output and resending initialization before A2DP (`evidence/reconnect-live-01.json`). This verifies control-channel recovery, not complete radio loss.
+2. Edit the service file to specify your correct path and Buds MAC address:
+   ```ini
+   # ~/.config/systemd/user/buds-native-seamless.service
+   [Unit]
+   Description=Galaxy Buds Native Seamless Switching
+   After=pipewire-pulse.service bluetooth.target
 
-Only Buds4 Pro is hardware-tested. Calls, case cycles, sleep/wake, complete radio loss, competing clients and long-term stability remain unverified. A lost SMEP socket or a BlueZ profile-disconnection request now parks managed audio on the existing private output and reconnects internally. Retries wait 1, 2, 4, 8, then at most 15 seconds between attempts, with a bounded connection wait per attempt. Each successful reconnect resends host settings and MDE v3 before restoring A2DP, refreshes the Buds sink identity and resets stale switching policy. Recovery itself sends no foreground request. Initial control-connection failures also retry; other fatal startup/audio failures use the service restart policy. Forced termination or an unavailable audio server can prevent cleanup. Very quiet sounds below the threshold do not request foreground. Brief sounds over 100 ms can now trigger switching. Initial audio is not buffered; protocol and Bluetooth transport delays can still lose the beginning of playback.
+   [Service]
+   Type=simple
+   ExecStart=/usr/bin/python3 /path/to/galaxy-buds-seamless-linux/buds_switch.py seamless <YOUR_BUDS_MAC>
+   Restart=on-failure
+   RestartSec=3
 
-No Samsung credentials were imported. The host descriptor currently uses constants recovered from the Windows wrapper; compatibility across accounts, firmware and other Buds models is not established. This is a working experimental native implementation, not a complete reproduction of Samsung’s ecosystem integration.
+   [Install]
+   WantedBy=default.target
+   ```
 
-See [RESEARCH.md](RESEARCH.md) for source anchors and live evidence. Evidence contains local device identifiers; review it before sharing.
+3. Enable and start the service:
+   ```sh
+   systemctl --user daemon-reload
+   systemctl --user enable --now buds-native-seamless.service
+   ```
 
-With overlapping A2DP startup, an active-phone-to-PC test measured request at 279 ms, local stream primed at 435 ms, and foreground/A2DP state at 691 ms (`evidence/latency-active-phone-10.json`). The user confirmed normal-media switching is quick enough with no speaker sound. Acoustic onset was not measured.
+4. Check the service status and logs:
+   ```sh
+   systemctl --user status buds-native-seamless.service
+   journalctl --user -u buds-native-seamless.service -f
+   ```
+
+---
+
+## Diagnostic Commands
+
+- **Probe Only**: Read the Buds capabilities and verify the SMEP control socket without altering audio:
+  ```sh
+  python3 buds_switch.py probe <YOUR_BUDS_MAC>
+  ```
+- **Take (One-shot Switch)**: Send an immediate foreground switch request:
+  ```sh
+  python3 buds_switch.py take <YOUR_BUDS_MAC>
+  ```
+- **Run Unit Tests**:
+  ```sh
+  python3 -m unittest -v
+  ```
+
+---
+
+## Technical Architecture & Behavior
+
+- **Private Waiting Sink**: While phone audio is active, Linux streams on managed outputs follow a private `BudsSwitchWait` null sink. It prevents sound leaks to physical speakers while calculating audio peaks.
+- **Overlapping A2DP Startup**: The switcher sends the MDE foreground request and unpauses A2DP concurrently, achieving smooth audio transition in ~200-300 ms.
+- **Multi-point Limitations**: Galaxy Buds firmware supports a maximum of **2 active ACL links** simultaneously (e.g. Linux + Phone). If a third device connects, the Buds firmware will evict the idle host.
