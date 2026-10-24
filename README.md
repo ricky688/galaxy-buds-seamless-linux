@@ -1,6 +1,6 @@
 # Samsung Galaxy Buds Native Seamless Switching for Linux
 
-Reconstructed from Samsung Settings Windows binaries and verified on Linux with **Galaxy Buds4 Pro** and a **Galaxy S24 Ultra**.  
+Verified on Linux with **Galaxy Buds4 Pro** and a **Galaxy S24 Ultra**.  
 It maintains Samsung’s proprietary **SMEP** (Samsung Multi-point Endpoint Protocol) control link, announces **MDE v3**, coordinates foreground/background audio handoffs, and requests foreground playback when sustained Linux sound is detected—all with **no Bluetooth disconnection or reconnect delays** during normal handoffs.
 
 ---
@@ -68,7 +68,7 @@ cd galaxy-buds-seamless-linux
 # Start seamless switching daemon
 python3 buds_switch.py seamless <YOUR_BUDS_MAC>
 ```
-*(Replace `<YOUR_BUDS_MAC>` with your device MAC address, e.g., `A8:D1:62:7E:1A:D6`)*
+*(Replace `<YOUR_BUDS_MAC>` with your device MAC address, e.g., `AA:BB:CC:DD:EE:FF`)*
 
 Leave this command running in the background or terminal:
 - **Phone playing audio**: Linux remains quietly in the background; phone audio plays continuously.

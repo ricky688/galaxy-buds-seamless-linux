@@ -1,4 +1,4 @@
-"""Linux endpoint routing and output peak meter for the recovered Windows policy."""
+"""Linux endpoint routing and output peak meter for the native switching policy."""
 
 import array
 import json
@@ -107,7 +107,7 @@ class Endpoints:
     def mute_fallback(self, muted):
         if self.waiting_module is not None:
             return  # A private null sink has no speaker; leave its meter unmuted.
-        # Preserve an existing user mute when the Windows policy says "unmute".
+        # Preserve an existing user mute when the policy says "unmute".
         wanted = bool(muted or self.original_mute)
         audio.pactl("set-sink-mute", self.fallback["name"], "1" if wanted else "0")
         self.last_mute = wanted

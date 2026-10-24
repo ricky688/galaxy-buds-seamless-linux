@@ -1,4 +1,4 @@
-"""Windows-derived AutoSwitch policy, with shorter Linux media activation timing."""
+"""Native AutoSwitch policy for Linux media activation timing."""
 
 
 class Policy:

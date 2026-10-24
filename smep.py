@@ -1,6 +1,6 @@
-"""SMEP format 3, reconstructed from Samsung Settings 8.0.13.0 packet builders.
+"""SMEP format 3 protocol implementation.
 
-Only unfragmented packets are supported. See RESEARCH.md for evidence and limits.
+Only unfragmented packets are supported. See RESEARCH.md for protocol specification and limits.
 """
 
 import binascii
@@ -24,7 +24,6 @@ def frame(command, payload=b"", sequence=0):
 def mde_version(version=3, sequence=0):
     if version not in (0, 1, 2, 3):
         raise ValueError("MDE version must be 0..3")
-    # The Windows wrapper passes zero for the optional account-info-present flag.
     return frame(0x43, bytes.fromhex("04 03 07 00 00 0b") + bytes((version, 0, 0, 0)), sequence)
 
 
@@ -33,7 +32,7 @@ def switch_request(sequence=0):
 
 
 def host_settings(sequence=0):
-    # Exact Classic-Bluetooth descriptor supplied by the reference Windows wrapper.
+    # Standard Classic-Bluetooth host descriptor.
     return frame(0x73, bytes.fromhex("01 01 04 00 01 75 00 2a 41 0c") + bytes(7), sequence)
 
 
@@ -64,7 +63,7 @@ def packets(buffer):
 
 
 def state(command, payload):
-    """Read the MDE record observed by the Windows DLL's state callbacks."""
+    """Read the MDE record reported by the Buds."""
     if command not in (0x44, 0x45):
         return None
     offset = 2 if command == 0x44 else 0
