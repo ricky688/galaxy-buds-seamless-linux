@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/home/user/Antigravity_project/REA/SamsungSoftware/Program Files/WindowsApps/SAMSUNGELECTRONICSCO.LTD.SamsungSettings1.5_8.0.13.0_x64__3c1yjt4zspk6g/EasyConnect2.dll",
+    "bytes": 692224,
+    "sha256": "18b77b868e2fb77dd0eb16b217981db74ab1809c7a96d9f2de09818c0eba3f0f"
+  },
+  {
+    "path": "/home/user/Antigravity_project/REA/SamsungSoftware/Program Files/WindowsApps/SAMSUNGELECTRONICSCO.LTD.SamsungSettings1.5_8.0.13.0_x64__3c1yjt4zspk6g/ExtensionCommon.dll",
+    "bytes": 724992,
+    "sha256": "062210f66873e93fca5d0fe68678334af5ae2b4f2ae43da92c0a06dd9288af1f"
+  },
+  {
+    "path": "/home/user/Antigravity_project/REA/SamsungSoftware/Program Files/WindowsApps/SAMSUNGELECTRONICSCO.LTD.SamsungSettings1.5_8.0.13.0_x64__3c1yjt4zspk6g/DllBudsMsgFmt.dll",
+    "bytes": 24200,
+    "sha256": "b75d80705e0a76795d44b3376468428278ee77549fee5a168ae807582db4ddc0"
+  },
+  {
+    "path": "/home/user/Antigravity_project/REA/SamsungSoftware/Program Files/WindowsApps/SAMSUNGELECTRONICSCO.LTD.SamsungSettings1.5_8.0.13.0_x64__3c1yjt4zspk6g/BudsMsgFmtDynamic.dll",
+    "bytes": 26760,
+    "sha256": "4611a4f54b142cd364b0871629ed230887a4cd00b601fdd1eec912f2bed19e5f"
+  }
+]

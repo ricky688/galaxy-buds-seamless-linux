@@ -1,0 +1,405 @@
+{"at": 1792686923.2876983, "event": "tx", "hex": "fc 06 00 01 44 00 01 f8 a7 cc"}
+{"at": 1792686923.2879608, "event": "tx", "hex": "fc 15 40 01 73 01 01 04 00 01 75 00 2a 41 0c 00 00 00 00 00 00 00 55 c6 cc"}
+{"at": 1792686923.2880247, "event": "tx", "hex": "fc 0e 80 01 43 04 03 07 00 00 0b 03 00 00 00 10 0f cc"}
+{"at": 1792686923.3946838, "event": "rx", "hex": "fc 08 10 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792686923.5014868, "event": "rx", "hex": "fc 08 50 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792686923.6076157, "event": "rx", "hex": "fc 94 90 01 44 00 01 01 01 01 03 02 01 04 3f 00 00 00 03 01 01 01 04 01 01 01 05 01 01 00 06 01 01 01 07 01 01 06 08 01 01 01 09 01 02 00 00 0a 01 02 00 00 0b 01 02 00 00 0c 01 01 03 0d 01 01 02 0e 01 01 01 0f 01 01 01 10 01 01 00 11 01 01 01 12 01 01 02 13 01 01 02 14 01 01 00 16 01 01 05 15 01 01 00 17 01 01 10 18 01 01 00 19 01 01 33 1a 01 01 01 1b 01 01 01 1c 01 01 01 1d 01 01 01 1e 01 01 00 1f 01 01 01 20 01 01 02 21 01 01 03 22 01 01 01 93 29 cc", "state": null}
+{"at": 1792686923.7705905, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 80 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 00 00 00 00 00 00 00 ff ff ff ff ad 23 01 03 40 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 ca ab da 6a a8 20 cc", "state": {"foreground": false, "role": 1, "reason": 128, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792686923.8790476, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792686923.9891489, "event": "native-ready", "fallback": "alsa_output.pci-0000_00_1f.3.analog-stereo", "state": {"foreground": false, "role": 1, "reason": 128, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792686993.315008, "event": "rx", "hex": "fc 20 10 01 45 02 02 01 01 03 02 01 00 06 02 01 01 07 02 01 01 08 02 01 5e 09 02 01 5d 0a 02 01 ff 83 92 cc", "state": null}
+{"at": 1792687063.178837, "event": "rx", "hex": "fc 20 50 01 45 02 02 01 01 03 02 01 00 06 02 01 01 07 02 01 01 08 02 01 5e 09 02 01 5c 0a 02 01 ff d2 38 cc", "state": null}
+{"at": 1792687142.8862274, "event": "tx", "hex": "fc 06 00 01 44 00 01 f8 a7 cc"}
+{"at": 1792687142.8865974, "event": "tx", "hex": "fc 15 40 01 73 01 01 04 00 01 75 00 2a 41 0c 00 00 00 00 00 00 00 55 c6 cc"}
+{"at": 1792687142.8867161, "event": "tx", "hex": "fc 0e 80 01 43 04 03 07 00 00 0b 03 00 00 00 10 0f cc"}
+{"at": 1792687142.9915912, "event": "rx", "hex": "fc 08 10 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792687143.0447474, "event": "rx", "hex": "fc 94 50 01 44 00 01 01 01 01 03 02 01 04 3f 00 00 00 03 01 01 01 04 01 01 01 05 01 01 00 06 01 01 01 07 01 01 06 08 01 01 01 09 01 02 00 00 0a 01 02 00 00 0b 01 02 00 00 0c 01 01 03 0d 01 01 02 0e 01 01 01 0f 01 01 01 10 01 01 00 11 01 01 01 12 01 01 02 13 01 01 02 14 01 01 00 16 01 01 05 15 01 01 00 17 01 01 10 18 01 01 00 19 01 01 33 1a 01 01 01 1b 01 01 01 1c 01 01 01 1d 01 01 01 1e 01 01 00 1f 01 01 01 20 01 01 02 21 01 01 03 22 01 01 01 93 29 cc", "state": null}
+{"at": 1792687143.2141073, "event": "rx", "hex": "fc 08 90 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792687143.3696296, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 80 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 00 00 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 a5 ac da 6a 62 3d cc", "state": {"foreground": false, "role": 1, "reason": 128, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687143.4417548, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687143.53233, "event": "native-ready", "fallback": "alsa_output.pci-0000_00_1f.3.analog-stereo", "state": {"foreground": false, "role": 1, "reason": 128, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687168.6351736, "event": "native-action", "action": "request"}
+{"at": 1792687168.635556, "event": "tx", "hex": "fc 05 c0 01 71 01 79 1c cc"}
+{"at": 1792687169.045682, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 81 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 dd 31 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 bf ac da 6a b9 aa cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687169.0458822, "event": "native-action", "action": "buds"}
+{"at": 1792687169.4838228, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 17 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 bf ac da 6a 5b 89 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687169.4840126, "event": "native-action", "action": "buds"}
+{"at": 1792687169.7911315, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c7 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 fe 0a 00 00 00 00 00 00 bf ac da 6a 8c 68 cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687169.7914135, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687169.9369185, "event": "background-audio-connected"}
+{"at": 1792687172.9492426, "event": "native-action", "action": "request"}
+{"at": 1792687172.9495187, "event": "tx", "hex": "fc 05 00 01 71 01 79 1c cc"}
+{"at": 1792687173.0946636, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 85 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 02 ac 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 9d 24 00 00 00 00 00 00 c3 ac da 6a 56 3e cc", "state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687173.0948946, "event": "native-action", "action": "buds"}
+{"at": 1792687180.9508708, "event": "native-action", "action": "standby"}
+{"at": 1792687182.450384, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 85 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 00 00 00 00 00 00 00 00 cc ac da 6a 4f 7b cc", "state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687183.2146764, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 87 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 54 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 cd ac da 6a d3 55 cc", "state": {"foreground": false, "role": 1, "reason": 135, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687183.2149367, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687183.2859917, "event": "background-audio-connected"}
+{"at": 1792687183.478432, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 f3 0a 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 cd ac da 6a 16 70 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687183.47862, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687183.950612, "event": "rx", "hex": "fc 07 d0 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687210.249909, "event": "rx", "hex": "fc 20 10 01 45 02 02 01 01 03 02 01 00 06 02 01 01 07 02 01 01 08 02 01 5d 09 02 01 5c 0a 02 01 ff 96 15 cc", "state": null}
+{"at": 1792687232.5398567, "event": "native-action", "action": "request"}
+{"at": 1792687232.540136, "event": "tx", "hex": "fc 05 40 01 71 01 79 1c cc"}
+{"at": 1792687232.9108505, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 f1 31 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 ff ac da 6a 0d f0 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687232.9110925, "event": "native-action", "action": "buds"}
+{"at": 1792687233.3422358, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 11 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 ff ac da 6a 6f 51 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687233.342432, "event": "native-action", "action": "buds"}
+{"at": 1792687233.6494586, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c5 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 f8 0a 00 00 00 00 00 00 ff ac da 6a a9 90 cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687233.6497803, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687233.8280396, "event": "background-audio-connected"}
+{"at": 1792687236.838699, "event": "native-action", "action": "request"}
+{"at": 1792687236.8389153, "event": "tx", "hex": "fc 05 80 01 71 01 79 1c cc"}
+{"at": 1792687236.9806345, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 85 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 02 b7 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 52 24 00 00 00 00 00 00 03 ad da 6a 76 7f cc", "state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687236.980811, "event": "native-action", "action": "buds"}
+{"at": 1792687252.6692019, "event": "native-action", "action": "standby"}
+{"at": 1792687252.827164, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c7 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 02 00 00 00 00 00 00 00 00 13 ad da 6a 29 49 cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687252.8273234, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687252.8968124, "event": "background-audio-connected"}
+{"at": 1792687252.897003, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 81 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 18 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 13 ad da 6a f6 80 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687252.89706, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687253.0745459, "event": "rx", "hex": "fc 07 d0 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687253.399686, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 f2 0a 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 13 ad da 6a ac 8b cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687253.3998315, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687253.6621695, "event": "rx", "hex": "fc 20 50 01 45 02 02 01 01 03 02 01 00 06 02 01 01 07 02 01 01 08 02 01 5d 09 02 01 5b 0a 02 01 ff 42 72 cc", "state": null}
+{"at": 1792687258.880779, "event": "native-action", "action": "request"}
+{"at": 1792687258.880939, "event": "tx", "hex": "fc 05 c0 01 71 01 79 1c cc"}
+{"at": 1792687259.3276093, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 81 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 d1 31 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 19 ad da 6a 17 2d cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687259.3277833, "event": "native-action", "action": "buds"}
+{"at": 1792687259.7134094, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c5 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 59 0b 00 00 00 00 00 00 1a ad da 6a e9 90 cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687259.7135386, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687259.848909, "event": "background-audio-connected"}
+{"at": 1792687259.849129, "event": "rx", "hex": "fc 07 10 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687259.9635837, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 02 07 31 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 9b 09 00 00 00 00 00 00 1a ad da 6a b9 d1 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687259.963728, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687262.8544376, "event": "native-action", "action": "request"}
+{"at": 1792687262.8546166, "event": "tx", "hex": "fc 05 00 01 71 01 79 1c cc"}
+{"at": 1792687263.2179465, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 85 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 02 b5 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 c6 01 00 00 00 00 00 00 1d ad da 6a d4 77 cc", "state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687263.2181706, "event": "native-action", "action": "buds"}
+{"at": 1792687263.8110275, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c7 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 02 26 09 00 00 00 00 00 00 1e ad da 6a f6 6f cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687263.8111944, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687263.992157, "event": "background-audio-connected"}
+{"at": 1792687264.4247136, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 02 64 30 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 02 c3 06 00 00 00 00 00 00 1f ad da 6a 43 a0 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687264.424868, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687264.9365659, "event": "rx", "hex": "fc 07 50 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687364.1967459, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 81 02 02 19 aa 00 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 82 ad da 6a ad bf cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 0}}
+{"at": 1792687366.2060258, "event": "native-action", "action": "buds"}
+{"at": 1792687366.6240184, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 87 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 71 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 84 ad da 6a 9c 70 cc", "state": {"foreground": true, "role": 0, "reason": 135, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687366.624226, "event": "native-action", "action": "buds"}
+{"at": 1792687366.917532, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 33 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 84 ad da 6a eb ee cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687366.917819, "event": "native-action", "action": "buds"}
+{"at": 1792687369.4347377, "event": "native-action", "action": "standby"}
+{"at": 1792687372.237902, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 8a ad da 6a 5f 11 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687440.6648018, "event": "rx", "hex": "fc 20 90 01 45 02 02 01 01 03 02 01 00 06 02 01 01 07 02 01 01 08 02 01 5c 09 02 01 5b 0a 02 01 ff 61 99 cc", "state": null}
+{"at": 1792687494.0276964, "event": "rx", "hex": "fc 20 d0 01 45 02 02 01 01 03 02 01 00 06 02 01 01 07 02 01 01 08 02 01 5c 09 02 01 5a 0a 02 01 ff 30 33 cc", "state": null}
+{"at": 1792687520.4843168, "event": "tx", "hex": "fc 06 00 01 44 00 01 f8 a7 cc"}
+{"at": 1792687520.4845886, "event": "tx", "hex": "fc 15 40 01 73 01 01 04 00 01 75 00 2a 41 0c 00 00 00 00 00 00 00 55 c6 cc"}
+{"at": 1792687520.4846718, "event": "tx", "hex": "fc 0e 80 01 43 04 03 07 00 00 0b 03 00 00 00 10 0f cc"}
+{"at": 1792687520.561825, "event": "rx", "hex": "fc 08 10 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792687520.5619833, "event": "rx", "hex": "fc 08 50 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792687520.6597815, "event": "rx", "hex": "fc 94 90 01 44 00 01 01 01 01 03 02 01 04 3f 00 00 00 03 01 01 01 04 01 01 01 05 01 01 00 06 01 01 01 07 01 01 06 08 01 01 01 09 01 02 00 00 0a 01 02 00 00 0b 01 02 00 00 0c 01 01 03 0d 01 01 02 0e 01 01 01 0f 01 01 01 10 01 01 00 11 01 01 01 12 01 01 02 13 01 01 02 14 01 01 00 16 01 01 05 15 01 01 00 17 01 01 10 18 01 01 00 19 01 01 33 1a 01 01 01 1b 01 01 01 1c 01 01 01 1d 01 01 01 1e 01 01 00 1f 01 01 01 20 01 01 02 21 01 01 03 22 01 01 01 93 29 cc", "state": null}
+{"at": 1792687520.806585, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 80 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 1f ae da 6a d9 c3 cc", "state": {"foreground": true, "role": 0, "reason": 128, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687520.9075778, "event": "native-action", "action": "buds"}
+{"at": 1792687521.1365852, "event": "native-ready", "fallback": "alsa_output.pci-0000_00_1f.3.analog-stereo", "state": {"foreground": true, "role": 0, "reason": 128, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687521.1370237, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 87 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 71 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 1f ae da 6a 4c f1 cc", "state": {"foreground": true, "role": 0, "reason": 135, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687521.1372979, "event": "native-action", "action": "buds"}
+{"at": 1792687521.283569, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 3c 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 1f ae da 6a 1e 49 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687521.2838018, "event": "native-action", "action": "buds"}
+{"at": 1792687523.4507577, "event": "native-action", "action": "standby"}
+{"at": 1792687524.0429852, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 85 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 22 ae da 6a e9 d3 cc", "state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687548.1456683, "event": "native-action", "action": "request"}
+{"at": 1792687548.145943, "event": "tx", "hex": "fc 05 c0 01 71 01 79 1c cc"}
+{"at": 1792687548.3156538, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 85 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 c6 32 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 3a ae da 6a 40 29 cc", "state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687548.3158593, "event": "native-action", "action": "buds"}
+{"at": 1792687548.5607018, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 3a 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 3b ae da 6a 09 02 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687548.560858, "event": "native-action", "action": "buds"}
+{"at": 1792687552.1168885, "event": "native-action", "action": "standby"}
+{"at": 1792687554.9308317, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 41 ae da 6a b4 e5 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687557.956233, "event": "native-action", "action": "request"}
+{"at": 1792687557.9564586, "event": "tx", "hex": "fc 05 00 01 71 01 79 1c cc"}
+{"at": 1792687558.0496335, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 85 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 c7 32 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 44 ae da 6a bc 0f cc", "state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687558.0497913, "event": "native-action", "action": "buds"}
+{"at": 1792687558.3175669, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 31 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 44 ae da 6a 98 99 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687558.3178053, "event": "native-action", "action": "buds"}
+{"at": 1792687562.448514, "event": "native-action", "action": "standby"}
+{"at": 1792687563.0253751, "event": "native-action", "action": "request"}
+{"at": 1792687563.0258493, "event": "tx", "hex": "fc 05 40 01 71 01 79 1c cc"}
+{"at": 1792687563.0768113, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 85 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 c8 32 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 49 ae da 6a 1f 10 cc", "state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687563.077021, "event": "native-action", "action": "buds"}
+{"at": 1792687563.2695858, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 58 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 49 ae da 6a 78 eb cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687563.2697752, "event": "native-action", "action": "buds"}
+{"at": 1792687564.7978222, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c7 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 58 05 00 00 00 00 00 00 4b ae da 6a 5c 17 cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687564.7980394, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687564.9409359, "event": "background-audio-connected"}
+{"at": 1792687565.2145216, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 81 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 3b 31 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 cc 03 00 00 00 00 00 00 4b ae da 6a bc 64 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687565.2146633, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687565.2669175, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 02 06 31 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 97 03 00 00 00 00 00 00 4b ae da 6a f4 59 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687565.2670271, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687566.0756867, "event": "rx", "hex": "fc 07 50 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687572.1301956, "event": "native-action", "action": "request"}
+{"at": 1792687572.1304402, "event": "tx", "hex": "fc 05 80 01 71 01 79 1c cc"}
+{"at": 1792687572.3316245, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 81 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 33 32 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 52 ae da 6a ec ae cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687572.331813, "event": "native-action", "action": "buds"}
+{"at": 1792687572.5614438, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 5d 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 52 ae da 6a 3c 03 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687572.5616546, "event": "native-action", "action": "buds"}
+{"at": 1792687576.040782, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c8 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 00 00 00 00 00 00 00 00 56 ae da 6a ee 6b cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687576.041004, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687576.2343726, "event": "background-audio-connected"}
+{"at": 1792687576.7509356, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 02 0d 30 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 00 00 00 00 00 00 00 00 57 ae da 6a cb 55 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687576.7511911, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687577.5717812, "event": "rx", "hex": "fc 07 90 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687585.2882195, "event": "native-action", "action": "request"}
+{"at": 1792687585.288417, "event": "tx", "hex": "fc 05 c0 01 71 01 79 1c cc"}
+{"at": 1792687585.5869305, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 81 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 06 32 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 5f ae da 6a 73 9f cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687585.5870621, "event": "native-action", "action": "buds"}
+{"at": 1792687585.8314967, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 5f 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 60 ae da 6a 3a 5f cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687585.831604, "event": "native-action", "action": "buds"}
+{"at": 1792687594.081743, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c6 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 00 00 00 00 00 00 00 00 68 ae da 6a ab 05 cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687594.0819561, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687594.239149, "event": "background-audio-connected"}
+{"at": 1792687594.6984675, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 02 5a 30 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 00 00 00 00 00 00 00 00 69 ae da 6a 0d 95 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687594.6986544, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687595.4190032, "event": "rx", "hex": "fc 07 d0 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687605.4018962, "event": "native-action", "action": "request"}
+{"at": 1792687605.402132, "event": "tx", "hex": "fc 05 00 01 71 01 79 1c cc"}
+{"at": 1792687606.3326204, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 81 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 dc 2f 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 74 ae da 6a 5c a5 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687606.332793, "event": "native-action", "action": "buds"}
+{"at": 1792687606.6255662, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 0b 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 75 ae da 6a f9 ed cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687606.625765, "event": "native-action", "action": "buds"}
+{"at": 1792687609.995597, "event": "native-action", "action": "standby"}
+{"at": 1792687612.7956424, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 81 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 7b ae da 6a f6 a1 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687623.564684, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 87 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 29 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 85 ae da 6a 72 93 cc", "state": {"foreground": false, "role": 1, "reason": 135, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687623.5649147, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687623.6405873, "event": "background-audio-connected"}
+{"at": 1792687623.717702, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 ec 0a 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 85 ae da 6a db f0 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687623.7178738, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687624.1906595, "event": "rx", "hex": "fc 07 90 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687628.4247928, "event": "native-action", "action": "request"}
+{"at": 1792687628.425026, "event": "tx", "hex": "fc 05 40 01 71 01 79 1c cc"}
+{"at": 1792687629.854607, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 81 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 b5 2d 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 00 00 00 00 00 00 00 00 8c ae da 6a 3e 1a cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687629.8548214, "event": "native-action", "action": "buds"}
+{"at": 1792687630.1695783, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 11 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 00 00 00 00 00 00 00 00 8c ae da 6a cd 69 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687630.169785, "event": "native-action", "action": "buds"}
+{"at": 1792687633.4581923, "event": "native-action", "action": "standby"}
+{"at": 1792687636.2577803, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 00 00 00 00 00 00 00 00 92 ae da 6a 00 59 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687706.5538003, "event": "tx", "hex": "fc 06 00 01 44 00 01 f8 a7 cc"}
+{"at": 1792687706.5540862, "event": "tx", "hex": "fc 15 40 01 73 01 01 04 00 01 75 00 2a 41 0c 00 00 00 00 00 00 00 55 c6 cc"}
+{"at": 1792687706.5541766, "event": "tx", "hex": "fc 0e 80 01 43 04 03 07 00 00 0b 03 00 00 00 10 0f cc"}
+{"at": 1792687706.6170664, "event": "rx", "hex": "fc 08 10 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792687706.6174073, "event": "rx", "hex": "fc 08 50 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792687706.7970695, "event": "rx", "hex": "fc 94 90 01 44 00 01 01 01 01 03 02 01 04 3f 00 00 00 03 01 01 01 04 01 01 01 05 01 01 00 06 01 01 01 07 01 01 06 08 01 01 01 09 01 02 00 00 0a 01 02 00 00 0b 01 02 00 00 0c 01 01 03 0d 01 01 02 0e 01 01 01 0f 01 01 01 10 01 01 00 11 01 01 01 12 01 01 02 13 01 01 02 14 01 01 00 16 01 01 05 15 01 01 00 17 01 01 10 18 01 01 00 19 01 01 33 1a 01 01 01 1b 01 01 01 1c 01 01 01 1d 01 01 01 1e 01 01 00 1f 01 01 01 20 01 01 02 21 01 01 03 22 01 01 01 93 29 cc", "state": null}
+{"at": 1792687706.8998632, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 80 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 00 00 00 00 00 00 00 00 d9 ae da 6a 8f d8 cc", "state": {"foreground": true, "role": 0, "reason": 128, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687707.010817, "event": "native-action", "action": "buds"}
+{"at": 1792687707.1825812, "event": "native-ready", "fallback": "buds_switch_wait_AABBCCDDEEFF", "state": {"foreground": true, "role": 0, "reason": 128, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687707.2418053, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 87 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 68 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 00 00 00 00 00 00 00 00 d9 ae da 6a 2b d6 cc", "state": {"foreground": true, "role": 0, "reason": 135, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687707.2420468, "event": "native-action", "action": "buds"}
+{"at": 1792687707.3467674, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 34 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 00 00 00 00 00 00 00 00 d9 ae da 6a 16 04 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687707.3469205, "event": "native-action", "action": "buds"}
+{"at": 1792687709.465716, "event": "native-action", "action": "standby"}
+{"at": 1792687710.1938777, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 85 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 00 00 00 00 00 00 00 00 dc ae da 6a 95 61 cc", "state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687715.7986586, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 87 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 34 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 e2 ae da 6a 93 8c cc", "state": {"foreground": false, "role": 1, "reason": 135, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687715.7988877, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687715.8417094, "event": "background-audio-connected"}
+{"at": 1792687716.16722, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 e4 0a 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 e2 ae da 6a 7a ae cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687716.1673903, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687716.2188113, "event": "rx", "hex": "fc 07 50 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687723.0179152, "event": "native-action", "action": "request"}
+{"at": 1792687723.018173, "event": "tx", "hex": "fc 05 c0 01 71 01 79 1c cc"}
+{"at": 1792687723.373703, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 81 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 e8 31 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 e9 ae da 6a 62 9e cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687723.3738744, "event": "native-action", "action": "buds"}
+{"at": 1792687723.6535919, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 fa 0a 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 e9 ae da 6a 75 58 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687723.6537757, "event": "native-action", "action": "buds"}
+{"at": 1792687727.1258678, "event": "native-action", "action": "standby"}
+{"at": 1792687729.8548162, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 81 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 f0 ae da 6a d1 62 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687730.0787418, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 87 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 52 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f0 ae da 6a 1f 17 cc", "state": {"foreground": false, "role": 1, "reason": 135, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687730.0789554, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687730.12011, "event": "background-audio-connected"}
+{"at": 1792687730.2397592, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 15 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 f0 ae da 6a 94 64 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687730.2399719, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687731.2899294, "event": "rx", "hex": "fc 07 d0 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687731.3916252, "event": "rx", "hex": "fc 20 10 01 45 02 02 01 01 03 02 01 00 06 02 01 01 07 02 01 01 08 02 01 5b 09 02 01 5a 0a 02 01 ff 9b 82 cc", "state": null}
+{"at": 1792687750.9747984, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 87 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 7b 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 05 af da 6a f3 da cc", "state": {"foreground": false, "role": 1, "reason": 135, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687750.9749794, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687751.5548718, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 2e 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 05 af da 6a 43 98 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687751.5550992, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687855.7436168, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 81 02 02 19 aa 00 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 6d af da 6a a2 0e cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 0}}
+{"at": 1792687857.7580373, "event": "native-action", "action": "buds"}
+{"at": 1792687857.989616, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 87 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 54 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 70 af da 6a e5 ef cc", "state": {"foreground": true, "role": 0, "reason": 135, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687857.9897628, "event": "native-action", "action": "buds"}
+{"at": 1792687858.0845454, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 0a 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 70 af da 6a 5f a0 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687858.0846772, "event": "native-action", "action": "buds"}
+{"at": 1792687859.4985716, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c6 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 78 05 00 00 00 00 00 00 71 af da 6a 5d cc cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687859.498754, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687859.6183386, "event": "background-audio-connected"}
+{"at": 1792687860.415745, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 02 30 2f 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 e2 01 00 00 00 00 00 00 72 af da 6a 58 c2 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687860.4159243, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687861.1198077, "event": "rx", "hex": "fc 07 10 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687865.203797, "event": "native-action", "action": "request"}
+{"at": 1792687865.2040186, "event": "tx", "hex": "fc 05 00 01 71 01 79 1c cc"}
+{"at": 1792687865.526337, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 01 32 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 77 af da 6a b5 6a cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687865.5265017, "event": "native-action", "action": "buds"}
+{"at": 1792687865.869788, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 14 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 77 af da 6a 38 bd cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687865.8700094, "event": "native-action", "action": "buds"}
+{"at": 1792687868.876625, "event": "native-action", "action": "standby"}
+{"at": 1792687870.503725, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c6 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 7c af da 6a 2f f3 cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687870.5039365, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687870.5511127, "event": "background-audio-connected"}
+{"at": 1792687870.683769, "event": "rx", "hex": "fc 07 10 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687871.0372872, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 db 0a 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 7d af da 6a fb 48 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687871.0374765, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687874.958576, "event": "native-action", "action": "request"}
+{"at": 1792687874.9587712, "event": "tx", "hex": "fc 05 40 01 71 01 79 1c cc"}
+{"at": 1792687876.4577706, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 81 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 cd 2d 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 82 af da 6a 36 21 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687876.4580493, "event": "native-action", "action": "buds"}
+{"at": 1792687876.7387683, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 0a 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 82 af da 6a 7a d2 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687876.7390103, "event": "native-action", "action": "buds"}
+{"at": 1792687879.879906, "event": "native-action", "action": "standby"}
+{"at": 1792687882.5331523, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c7 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 88 af da 6a 40 60 cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687882.5335865, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687882.5722816, "event": "background-audio-connected"}
+{"at": 1792687882.6527517, "event": "rx", "hex": "fc 07 50 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687882.9010928, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 2b 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 89 af da 6a b5 e7 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687882.9012978, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687891.8141866, "event": "native-action", "action": "request"}
+{"at": 1792687891.8144937, "event": "tx", "hex": "fc 05 80 01 71 01 79 1c cc"}
+{"at": 1792687893.3338466, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 81 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 02 7f 2d 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 93 af da 6a 02 01 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687893.3340685, "event": "native-action", "action": "buds"}
+{"at": 1792687893.6315484, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 1f 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 93 af da 6a 29 fe cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687893.631699, "event": "native-action", "action": "buds"}
+{"at": 1792687897.296033, "event": "native-action", "action": "standby"}
+{"at": 1792687900.0227478, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 9a af da 6a 98 64 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687914.904746, "event": "rx", "hex": "fc 20 90 01 45 02 02 01 01 03 02 01 00 06 02 01 01 07 02 01 02 08 02 01 5b 09 02 01 5a 0a 02 01 ff 3e 4d cc", "state": null}
+{"at": 1792687917.732501, "event": "rx", "hex": "fc 20 d0 01 45 02 02 01 01 03 02 01 00 06 02 01 01 07 02 01 03 08 02 01 5b 09 02 01 5a 0a 02 01 57 bf 3c cc", "state": null}
+{"at": 1792687917.8366458, "event": "rx", "hex": "fc 10 10 01 45 28 02 01 00 29 02 01 01 2a 02 01 31 34 52 cc", "state": null}
+{"at": 1792687918.0596206, "event": "rx", "hex": "fc 10 50 01 45 0c 02 01 00 0d 02 01 01 2f 02 01 00 72 df cc", "state": null}
+{"at": 1792687918.0615644, "event": "rx", "hex": "fc 06 90 01 42 80 01 c0 0e cc", "state": null}
+{"at": 1792687918.1068819, "event": "rx", "hex": "fc 10 d0 01 45 0c 02 01 00 0d 02 01 01 2f 02 01 00 72 df cc", "state": null}
+{"at": 1792687918.1256015, "event": "rx", "hex": "fc 06 10 01 42 80 01 c0 0e cc", "state": null}
+{"at": 1792687918.5627089, "event": "rx", "hex": "fc 10 50 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792687918.562839, "event": "rx", "hex": "fc 06 90 01 42 80 00 e1 1e cc", "state": null}
+{"at": 1792687919.686996, "event": "rx", "hex": "fc 20 d0 01 45 02 02 01 01 03 02 01 00 06 02 01 02 07 02 01 03 08 02 01 5b 09 02 01 5a 0a 02 01 57 99 0d cc", "state": null}
+{"at": 1792687920.268703, "event": "rx", "hex": "fc 10 10 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792687921.3418238, "event": "rx", "hex": "fc 06 50 01 42 80 00 e1 1e cc", "state": null}
+{"at": 1792687921.469677, "event": "rx", "hex": "fc 20 90 01 45 02 02 01 01 03 02 01 00 06 02 01 03 07 02 01 03 08 02 01 5b 09 02 01 5a 0a 02 01 57 7b 1d cc", "state": null}
+{"at": 1792687921.680679, "event": "rx", "hex": "fc 10 10 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792687921.795598, "event": "rx", "hex": "fc 06 50 01 42 80 00 e1 1e cc", "state": null}
+{"at": 1792687923.4845684, "event": "rx", "hex": "fc 10 90 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792687924.5408936, "event": "rx", "hex": "fc 06 d0 01 42 80 00 e1 1e cc", "state": null}
+{"at": 1792687924.6897933, "event": "rx", "hex": "fc 20 10 01 45 02 02 01 01 03 02 01 00 06 02 01 03 07 02 01 03 08 02 01 5c 09 02 01 5a 0a 02 01 57 d0 ac cc", "state": null}
+{"at": 1792687958.0688925, "event": "rx", "hex": "fc 20 50 01 45 02 02 01 01 03 02 01 00 06 02 01 03 07 02 01 03 08 02 01 5c 09 02 01 5a 0a 02 01 58 3f 5d cc", "state": null}
+{"at": 1792687958.392661, "event": "rx", "hex": "fc 10 90 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792687959.6526756, "event": "rx", "hex": "fc 06 d0 01 42 80 00 e1 1e cc", "state": null}
+{"at": 1792687960.7976675, "event": "rx", "hex": "fc 10 10 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792687969.4133089, "event": "tx", "hex": "fc 06 00 01 44 00 01 f8 a7 cc"}
+{"at": 1792687969.413713, "event": "tx", "hex": "fc 15 40 01 73 01 01 04 00 01 75 00 2a 41 0c 00 00 00 00 00 00 00 55 c6 cc"}
+{"at": 1792687969.4139252, "event": "tx", "hex": "fc 0e 80 01 43 04 03 07 00 00 0b 03 00 00 00 10 0f cc"}
+{"at": 1792687969.499798, "event": "rx", "hex": "fc 08 10 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792687969.5340283, "event": "rx", "hex": "fc 94 50 01 44 00 01 01 01 01 03 02 01 04 3f 00 00 00 03 01 01 01 04 01 01 01 05 01 01 00 06 01 01 01 07 01 01 06 08 01 01 01 09 01 02 00 00 0a 01 02 00 00 0b 01 02 00 00 0c 01 01 03 0d 01 01 02 0e 01 01 01 0f 01 01 01 10 01 01 00 11 01 01 01 12 01 01 02 13 01 01 02 14 01 01 00 16 01 01 05 15 01 01 00 17 01 01 10 18 01 01 00 19 01 01 33 1a 01 01 01 1b 01 01 01 1c 01 01 01 1d 01 01 01 1e 01 01 00 1f 01 01 01 20 01 01 02 21 01 01 03 22 01 01 01 93 29 cc", "state": null}
+{"at": 1792687969.5387094, "event": "rx", "hex": "fc 08 90 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792687969.588762, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 80 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 e0 af da 6a 4a bf cc", "state": {"foreground": true, "role": 0, "reason": 128, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687969.7219057, "event": "native-action", "action": "buds"}
+{"at": 1792687969.9020083, "event": "native-ready", "fallback": "buds_switch_wait_AABBCCDDEEFF", "state": {"foreground": true, "role": 0, "reason": 128, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792687970.0916467, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 87 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 c6 0a 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 e0 af da 6a e4 95 cc", "state": {"foreground": true, "role": 0, "reason": 135, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687970.0918808, "event": "native-action", "action": "buds"}
+{"at": 1792687970.1676216, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 9b 0a 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 e0 af da 6a 0a 81 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687970.1677742, "event": "native-action", "action": "buds"}
+{"at": 1792687972.2963417, "event": "native-action", "action": "standby"}
+{"at": 1792687973.6486726, "event": "rx", "hex": "fc 10 90 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792687973.7979732, "event": "rx", "hex": "fc 06 d0 01 42 80 00 e1 1e cc", "state": null}
+{"at": 1792687974.0921242, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 87 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 36 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 e4 af da 6a bd 01 cc", "state": {"foreground": false, "role": 1, "reason": 135, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792687974.0923433, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687974.1447804, "event": "background-audio-connected"}
+{"at": 1792687974.1977794, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 fb 0a 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 e4 af da 6a 4a 34 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792687974.1980128, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792687974.5125563, "event": "rx", "hex": "fc 07 10 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792687979.775781, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 81 02 02 19 aa 00 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 ea af da 6a b7 82 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 0}}
+{"at": 1792687981.7931693, "event": "native-action", "action": "buds"}
+{"at": 1792687982.3365326, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 87 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 91 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 01 eb af da 6a 3f d7 cc", "state": {"foreground": true, "role": 0, "reason": 135, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792687982.336678, "event": "native-action", "action": "buds"}
+{"at": 1792687982.469826, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 83 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 c8 0a 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 01 eb af da 6a 27 a2 cc", "state": {"foreground": true, "role": 0, "reason": 131, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792687982.4699378, "event": "native-action", "action": "buds"}
+{"at": 1792687982.5691614, "event": "rx", "hex": "fc 10 d0 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792687982.5693176, "event": "rx", "hex": "fc 10 50 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792687983.5064406, "event": "rx", "hex": "fc 20 d0 01 45 02 02 01 01 03 02 01 01 06 02 01 03 07 02 01 03 08 02 01 5d 09 02 01 5a 0a 02 01 58 ea 63 cc", "state": null}
+{"at": 1792687983.805324, "event": "rx", "hex": "fc 10 10 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792687983.8735578, "event": "rx", "hex": "fc 06 50 01 42 80 00 e1 1e cc", "state": null}
+{"at": 1792687984.8303714, "event": "native-action", "action": "standby"}
+{"at": 1792687985.6874776, "event": "rx", "hex": "fc 10 90 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792687985.7319806, "event": "rx", "hex": "fc 06 d0 01 42 80 00 e1 1e cc", "state": null}
+{"at": 1792687986.8467765, "event": "rx", "hex": "fc 20 10 01 45 02 02 01 01 03 02 01 01 06 02 01 03 07 02 01 03 08 02 01 5d 09 02 01 5b 0a 02 01 58 bb c9 cc", "state": null}
+{"at": 1792687987.8467124, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 01 f2 af da 6a d8 12 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792688011.347694, "event": "rx", "hex": "fc 10 90 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792688012.4687254, "event": "rx", "hex": "fc 06 d0 01 42 80 00 e1 1e cc", "state": null}
+{"at": 1792688012.6615689, "event": "rx", "hex": "fc 20 10 01 45 02 02 01 01 03 02 01 01 06 02 01 03 07 02 01 02 08 02 01 5d 09 02 01 5b 0a 02 01 58 d8 8c cc", "state": null}
+{"at": 1792688012.7318215, "event": "rx", "hex": "fc 10 50 01 45 28 02 01 01 29 02 01 00 2a 02 01 21 77 01 cc", "state": null}
+{"at": 1792688014.276695, "event": "rx", "hex": "fc 20 90 01 45 02 02 01 01 03 02 01 01 06 02 01 03 07 02 01 01 08 02 01 5d 09 02 01 5b 0a 02 01 58 7d 43 cc", "state": null}
+{"at": 1792688014.4968631, "event": "rx", "hex": "fc 10 d0 01 45 0c 02 01 00 0d 02 01 01 2f 02 01 00 72 df cc", "state": null}
+{"at": 1792688014.6926963, "event": "rx", "hex": "fc 20 50 01 45 02 02 01 01 03 02 01 01 06 02 01 02 07 02 01 01 08 02 01 5c 09 02 01 5b 0a 02 01 ff b1 7d cc", "state": null}
+{"at": 1792688016.0027876, "event": "rx", "hex": "fc 10 90 01 45 28 02 01 00 29 02 01 00 2a 02 01 21 54 ea cc", "state": null}
+{"at": 1792688016.2161405, "event": "rx", "hex": "fc 20 d0 01 45 02 02 01 01 03 02 01 01 06 02 01 01 07 02 01 01 08 02 01 5c 09 02 01 5b 0a 02 01 ff 97 4c cc", "state": null}
+{"at": 1792688016.525836, "event": "rx", "hex": "fc 10 10 01 45 0c 02 01 00 0d 02 01 01 2f 02 01 00 72 df cc", "state": null}
+{"at": 1792688016.5608034, "event": "rx", "hex": "fc 06 50 01 42 80 01 c0 0e cc", "state": null}
+{"at": 1792688032.7297049, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 87 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 50 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 01 1f b0 da 6a af 28 cc", "state": {"foreground": false, "role": 1, "reason": 135, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792688032.729958, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792688032.7886183, "event": "background-audio-connected"}
+{"at": 1792688032.895682, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c7 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 01 1f b0 da 6a f1 32 cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792688032.8958972, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792688033.0576649, "event": "rx", "hex": "fc 07 50 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792688053.376624, "event": "rx", "hex": "fc 20 90 01 45 02 02 01 01 03 02 01 01 06 02 01 01 07 02 01 01 08 02 01 5c 09 02 01 5a 0a 02 01 ff c6 e6 cc", "state": null}
+{"at": 1792688054.8390172, "event": "native-action", "action": "request"}
+{"at": 1792688054.8392253, "event": "tx", "hex": "fc 05 c0 01 71 01 79 1c cc"}
+{"at": 1792688054.9958375, "event": "audio-primed"}
+{"at": 1792688055.251731, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 54 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 02 00 00 00 00 00 00 00 01 35 b0 da 6a f4 f6 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792688055.2519412, "event": "native-action", "action": "buds"}
+{"at": 1792688059.8993611, "event": "native-action", "action": "standby"}
+{"at": 1792688062.7280438, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 81 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 00 00 00 00 00 00 00 01 3d b0 da 6a ab 95 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792688069.6919382, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 87 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 53 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 01 44 b0 da 6a df 18 cc", "state": {"foreground": false, "role": 1, "reason": 135, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792688069.6922965, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792688069.7406085, "event": "background-audio-connected"}
+{"at": 1792688069.905744, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 0a 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 01 44 b0 da 6a 1e 27 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792688069.9059675, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792688070.0628035, "event": "rx", "hex": "fc 07 d0 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792688075.5048435, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 01 81 02 02 19 aa 00 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 01 4a b0 da 6a c2 ad cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 0}}
+{"at": 1792688077.5217707, "event": "native-action", "action": "buds"}
+{"at": 1792688077.7105966, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 87 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 58 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 01 4c b0 da 6a 4c 34 cc", "state": {"foreground": true, "role": 0, "reason": 135, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792688077.710762, "event": "native-action", "action": "buds"}
+{"at": 1792688077.825227, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 10 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 01 4c b0 da 6a e2 61 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792688077.825401, "event": "native-action", "action": "buds"}
+{"at": 1792688079.9555287, "event": "native-action", "action": "standby"}
+{"at": 1792688080.3346436, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 85 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 02 c6 32 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 15 01 00 00 00 00 00 01 4e b0 da 6a 15 16 cc", "state": {"foreground": false, "role": 1, "reason": 133, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792688080.3348277, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792688080.3926148, "event": "background-audio-connected"}
+{"at": 1792688080.5445764, "event": "rx", "hex": "fc 07 10 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792688080.9296834, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 40 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 01 4f b0 da 6a 6a 60 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792688080.9298508, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792688088.747722, "event": "native-action", "action": "request"}
+{"at": 1792688088.747887, "event": "tx", "hex": "fc 05 00 01 71 01 79 1c cc"}
+{"at": 1792688088.908111, "event": "audio-primed"}
+{"at": 1792688089.0169513, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 02 0b 32 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 00 00 00 00 00 00 00 01 57 b0 da 6a eb d4 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792688089.017092, "event": "native-action", "action": "buds"}
+{"at": 1792688092.6531107, "event": "native-action", "action": "standby"}
+{"at": 1792688095.4537442, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 81 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 01 5e b0 da 6a ce d8 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792688172.7486699, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 01 87 02 02 19 aa 80 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 52 0b 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 01 ab b0 da 6a 08 8e cc", "state": {"foreground": false, "role": 1, "reason": 135, "mde_version": 2, "stream_flags": 128}}
+{"at": 1792688172.7488134, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792688172.7874222, "event": "background-audio-connected"}
+{"at": 1792688173.4891222, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 01 81 02 02 19 aa 01 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 01 19 aa 00 04 fc 0a 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 01 ab b0 da 6a 40 3b cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 1}}
+{"at": 1792688173.4893367, "event": "native-action", "action": "fallback-muted"}
+{"at": 1792688173.749989, "event": "rx", "hex": "fc 07 90 01 42 79 09 0a ee 74 cc", "state": null}
+{"at": 1792688181.494433, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 01 81 02 02 19 aa 00 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 01 b3 b0 da 6a f8 c1 cc", "state": {"foreground": false, "role": 1, "reason": 129, "mde_version": 2, "stream_flags": 0}}
+{"at": 1792688183.5067248, "event": "native-action", "action": "buds"}
+{"at": 1792688183.7084012, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 87 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 5b 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 01 b6 b0 da 6a fe 98 cc", "state": {"foreground": true, "role": 0, "reason": 135, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792688183.7085783, "event": "native-action", "action": "buds"}
+{"at": 1792688183.8202064, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 01 00 00 00 04 1c 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 01 b6 b0 da 6a 75 eb cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792688183.8204064, "event": "native-action", "action": "buds"}
+{"at": 1792688186.074796, "event": "native-action", "action": "standby"}
+{"at": 1792688186.6228807, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 85 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 41 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 01 b9 b0 da 6a 5a f9 cc", "state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792688196.8088586, "event": "rx", "hex": "fc 10 d0 01 45 0c 02 01 00 0d 02 01 01 2f 02 01 00 72 df cc", "state": null}
+{"at": 1792688196.8595672, "event": "rx", "hex": "fc 06 10 01 42 80 01 c0 0e cc", "state": null}
+{"at": 1792688198.046792, "event": "rx", "hex": "fc 20 90 01 45 02 02 01 01 03 02 01 01 06 02 01 02 07 02 01 03 08 02 01 5c 09 02 01 5a 0a 02 01 5b 48 a8 cc", "state": null}
+{"at": 1792688198.1401103, "event": "rx", "hex": "fc 10 d0 01 45 28 02 01 00 29 02 01 01 2a 02 01 21 05 40 cc", "state": null}
+{"at": 1792688198.2596178, "event": "rx", "hex": "fc 10 10 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792688198.2865584, "event": "rx", "hex": "fc 06 50 01 42 80 00 e1 1e cc", "state": null}
+{"at": 1792688199.4061677, "event": "rx", "hex": "fc 10 90 01 45 0c 02 01 00 0d 02 01 00 2f 02 01 00 23 75 cc", "state": null}
+{"at": 1792688200.6398833, "event": "rx", "hex": "fc 10 10 01 45 28 02 01 01 29 02 01 01 2a 02 01 21 26 ab cc", "state": null}
+{"at": 1792688207.7327898, "event": "error", "message": "[Errno 104] Connection reset by peer"}

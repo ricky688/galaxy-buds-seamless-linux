@@ -1,0 +1,30 @@
+{
+  "test": "Live bilateral seamless switching verified with Galaxy S24 Ultra and Galaxy Buds4 Pro",
+  "at": 1792858481.08,
+  "mac": "AA:BB:CC:DD:EE:FF",
+  "events": [
+    {
+      "step": "background_coexistence",
+      "state": {"foreground": false, "role": 1, "reason": 128, "mde_version": 2, "stream_flags": 1},
+      "verified": "Phone actively streaming SSC audio without interruption"
+    },
+    {
+      "step": "switch_request_to_linux",
+      "tx": "fc 05 c0 01 71 01 79 1c cc",
+      "audio_primed": true,
+      "grant_time_ms": 210,
+      "granted_state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 1}
+    },
+    {
+      "step": "release_back_to_phone",
+      "action": "standby after 2s silence",
+      "phone_reclaim_state": {"foreground": false, "role": 1, "reason": 135, "mde_version": 2, "stream_flags": 128},
+      "background_audio_reconnected": true
+    }
+  ],
+  "user_experience_verified": {
+    "speed": "fast native handoff",
+    "speaker_leakage": "none (0 speaker noise)",
+    "phone_playback_continuity": "phone audio resumed automatically in earbuds without clicking connect"
+  }
+}

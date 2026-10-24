@@ -1,0 +1,57 @@
+[
+  {
+    "path": "WindowsMCFCore.il",
+    "bytes": 18182027,
+    "sha256": "f8649fcea6b706dfba19da0d46f1c5d0edc41de3152d446ab9c6aa9bbf46750a"
+  },
+  {
+    "path": "core-metadata.json",
+    "bytes": 10863,
+    "sha256": "f942828044963643fb87b2b39f4052163617c5c2e77143c003cbb8a0bc69b6ec"
+  },
+  {
+    "path": "peer-Commons.il",
+    "bytes": 5468050,
+    "sha256": "bbcf9788195b2d88e252520ce32195fe8ed1ef6763f5e898e5e49d2979b1a807"
+  },
+  {
+    "path": "peer-artifact.json",
+    "bytes": 220,
+    "sha256": "eefba5acfa6bd19c56337a0658ab3241ff0dc2af9c210438c534c50ac89e956c"
+  },
+  {
+    "path": "peer-findings.md",
+    "bytes": 4810,
+    "sha256": "b5bc883c7b6ef880b5b513bb91e0d563ee98f326522ad7a604760cc6e4e7a439"
+  },
+  {
+    "path": "peer-rea-metadata.json",
+    "bytes": 12531,
+    "sha256": "8b4680aab707e36bc8dde7ef2ea266c8627c5327916e6373274c5486c0293a92"
+  },
+  {
+    "path": "peer-selected-classes.diff",
+    "bytes": 32094,
+    "sha256": "cbb54213f296411f9d3ab8ca3bfd5a64fe07f7d584df19152ed19445dc45f289"
+  },
+  {
+    "path": "ui-ContinuityFeatureApps.il",
+    "bytes": 196114,
+    "sha256": "05a0437119117ab6b3efda2b7226e3c95cd482e0ba77d53168854569122d0dc0"
+  },
+  {
+    "path": "ui-GalaxyConnectWinUI.il",
+    "bytes": 18162026,
+    "sha256": "c230364eaa0e76888dcf30319b52573c834535ff55988a4e81d58ce39d5c57b1"
+  },
+  {
+    "path": "ui-findings.md",
+    "bytes": 5159,
+    "sha256": "7298e763cd029ac7182108e04c755c24572c6d88f314f424003b3f1777a4cc19"
+  },
+  {
+    "path": "ui-rea-metadata.json",
+    "bytes": 14940,
+    "sha256": "fa3bd91f57ab9d9467fb81b3c1d00e794eac517133a5290c56efcb624b02dfff"
+  }
+]

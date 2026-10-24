@@ -1,0 +1,26 @@
+{"at": 1792686179.9624252, "event": "tx", "hex": "fc 06 00 01 44 00 01 f8 a7 cc"}
+{"at": 1792686179.9791524, "event": "tx", "hex": "fc 15 40 01 73 01 01 04 00 01 75 00 2a 41 0c 00 00 00 00 00 00 00 55 c6 cc"}
+{"at": 1792686179.9792233, "event": "tx", "hex": "fc 0e 80 01 43 04 03 07 00 00 0b 03 00 00 00 10 0f cc"}
+{"at": 1792686180.0115466, "event": "rx", "hex": "fc 08 10 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792686180.0346768, "event": "rx", "hex": "fc 94 50 01 44 00 01 01 01 01 03 02 01 04 3f 00 00 00 03 01 01 01 04 01 01 01 05 01 01 00 06 01 01 01 07 01 01 06 08 01 01 01 09 01 02 00 00 0a 01 02 00 00 0b 01 02 00 00 0c 01 01 03 0d 01 01 02 0e 01 01 01 0f 01 01 01 10 01 01 00 11 01 01 01 12 01 01 02 13 01 01 02 14 01 01 00 16 01 01 05 15 01 01 00 17 01 01 10 18 01 01 00 19 01 01 33 1a 01 01 01 1b 01 01 01 1c 01 01 01 1d 01 01 01 1e 01 01 00 1f 01 01 01 20 01 01 02 21 01 01 03 22 01 01 01 93 29 cc", "state": null}
+{"at": 1792686180.0727077, "event": "rx", "hex": "fc 08 90 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792686180.1084812, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 80 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 40 00 15 00 00 00 00 00 00 00 01 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 40 00 00 00 00 00 00 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 e2 a8 da 6a bd 7d cc", "state": {"foreground": true, "role": 0, "reason": 128, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792686180.108548, "event": "native-action", "action": "buds"}
+{"at": 1792686180.344522, "event": "native-ready", "fallback": "alsa_output.pci-0000_00_1f.3.analog-stereo", "state": {"foreground": true, "role": 0, "reason": 128, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792686182.549167, "event": "native-action", "action": "standby"}
+{"at": 1792686185.1837199, "event": "rx", "hex": "fc 53 10 01 45 02 05 4c 0b 00 81 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 40 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 40 00 00 00 00 00 00 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 e7 a8 da 6a 0f 9d cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792686209.851932, "event": "native-action", "action": "request"}
+{"at": 1792686209.8521276, "event": "tx", "hex": "fc 05 c0 01 71 01 79 1c cc"}
+{"at": 1792686210.0557601, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 85 03 01 00 00 80 01 1e 00 ff ff ff ff ad 23 01 03 40 00 15 00 00 00 00 00 00 00 00 00 00 00 02 c6 32 00 00 00 00 00 ff ff ff ff 58 1c 02 02 40 00 00 00 00 00 00 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 00 a9 da 6a 66 ef cc", "state": {"foreground": true, "role": 0, "reason": 133, "mde_version": 3, "stream_flags": 128}}
+{"at": 1792686210.055988, "event": "native-action", "action": "buds"}
+{"at": 1792686210.4930089, "event": "rx", "hex": "fc 53 90 01 45 02 05 4c 0b 00 81 03 01 00 00 01 01 1e 00 ff ff ff ff ad 23 01 03 40 00 15 00 00 00 00 00 00 00 01 00 00 00 04 51 0b 00 00 00 00 00 ff ff ff ff 58 1c 02 02 40 00 00 00 00 00 00 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 00 a9 da 6a 7a 64 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 1}}
+{"at": 1792686210.493119, "event": "native-action", "action": "buds"}
+{"at": 1792686212.9622715, "event": "native-action", "action": "standby"}
+{"at": 1792686215.7397325, "event": "rx", "hex": "fc 53 d0 01 45 02 05 4c 0b 00 81 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 40 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 40 00 00 00 00 00 00 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 05 a9 da 6a bd c3 cc", "state": {"foreground": true, "role": 0, "reason": 129, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792686237.2806444, "event": "rx", "hex": "fc 20 10 01 45 02 02 01 01 03 02 01 00 06 02 01 01 07 02 01 01 08 02 01 5f 09 02 01 5f 0a 02 01 ff 23 3d cc", "state": null}
+{"at": 1792686295.0068371, "event": "rx", "hex": "fc 53 50 01 45 02 05 4c 0b 00 80 03 01 00 00 00 01 1e 00 ff ff ff ff ad 23 01 03 40 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 ff ff ff ff 58 1c 02 02 40 00 10 00 00 00 00 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 00 55 a9 da 6a 4e 5c cc", "state": {"foreground": true, "role": 0, "reason": 128, "mde_version": 3, "stream_flags": 0}}
+{"at": 1792686296.3707514, "event": "rx", "hex": "fc 08 90 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792686296.6357412, "event": "rx", "hex": "fc 08 d0 01 45 1f 02 01 02 c5 c5 cc", "state": null}
+{"at": 1792686297.1236122, "event": "rx", "hex": "fc 06 10 01 42 85 00 14 e1 cc", "state": null}
+{"at": 1792686329.4866145, "event": "rx", "hex": "fc 10 50 01 45 0c 02 01 00 0d 02 01 01 2f 02 01 00 72 df cc", "state": null}
+{"at": 1792686329.534649, "event": "rx", "hex": "fc 06 90 01 42 80 01 c0 0e cc", "state": null}

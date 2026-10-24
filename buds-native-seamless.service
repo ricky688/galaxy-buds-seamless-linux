@@ -1,0 +1,13 @@
+[Unit]
+Description=Galaxy Buds native seamless switching
+After=pipewire-pulse.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/user/Antigravity_project/REA/buds-switch-linux/buds_switch.py seamless AA:BB:CC:DD:EE:FF
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=30
+
+[Install]
+WantedBy=default.target

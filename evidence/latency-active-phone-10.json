@@ -1,0 +1,10 @@
+{
+  "test": "Active phone A2DP playback to Linux, overlapped A2DP startup",
+  "started": 1792688054.5604186,
+  "phone_before": "=== A2dpStateMachine for XX:XX:XX:XX:1A:D6 (Active) ===\n    getConnectionPolicy: 100\n    mConnectionState: STATE_CONNECTED, mLastConnectionState: STATE_CONNECTING\n    mIsPlaying: true\n    mDelayReport: 517\n    getSupportsOptionalCodecs: 1, getOptionalCodecsEnabled: 1\n  ",
+  "request_delay_seconds": 0.2786,
+  "audio_primed_delay_seconds": 0.4354,
+  "foreground_delay_seconds": 0.6913,
+  "a2dp_streaming_delay_seconds": 0.6913,
+  "pacat_exit": 0
+}

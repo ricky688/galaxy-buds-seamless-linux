@@ -1,0 +1,12 @@
+{
+  "at": 1792724876.4027693,
+  "pid_before": "115078",
+  "pid_after": "115078",
+  "same_process": true,
+  "recovered": true,
+  "waiting_outputs": [
+    "buds_switch_wait_AABBCCDDEEFF"
+  ],
+  "default_sink": "buds_switch_wait_AABBCCDDEEFF",
+  "log": "{\"at\": 1792724873.3567607, \"event\": \"control-lost\", \"message\": \"Buds closed the SMEP connection\"}\n{\"at\": 1792724873.384046, \"event\": \"reconnect-wait\", \"seconds\": 1}\n{\"at\": 1792724875.3883917, \"event\": \"tx\", \"hex\": \"fc 15 00 01 73 01 01 04 00 01 75 00 2a 41 0c 00 00 00 00 00 00 00 55 c6 cc\"}\n{\"at\": 1792724875.3886375, \"event\": \"tx\", \"hex\": \"fc 0e 40 01 43 04 03 07 00 00 0b 03 00 00 00 10 0f cc\"}\n{\"at\": 1792724875.5021486, \"event\": \"rx\", \"hex\": \"fc 08 10 01 45 1f 02 01 02 c5 c5 cc\", \"state\": null}\n{\"at\": 1792724875.536245, \"event\": \"rx\", \"hex\": \"fc 08 50 01 45 1f 02 01 02 c5 c5 cc\", \"state\": null}\n{\"at\": 1792724875.68319, \"event\": \"rx\", \"hex\": \"fc 53 90 01 45 02 05 4c 0b 01 80 02 02 19 aa 00 01 1e 00 ff ff ff ff 58 1c 02 02 41 00 15 00 00 00 01 00 9a 91 00 19 aa 00 04 00 00 00 00 00 00 00 ff ff ff ff ad 23 01 03 40 00 15 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 00 0a 40 db 6a 06 5d cc\", \"state\": {\"foreground\": false, \"role\": 1, \"reason\": 128, \"mde_version\": 2, \"stream_flags\": 0}}\n{\"at\": 1792724875.7196302, \"event\": \"control-recovered\", \"state\": {\"foreground\": false, \"role\": 1, \"reason\": 128, \"mde_version\": 2, \"stream_flags\": 0}}\n"
+}

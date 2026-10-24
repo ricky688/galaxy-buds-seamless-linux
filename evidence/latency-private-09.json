@@ -1,0 +1,7 @@
+{
+  "test": "private virtual parking output to Buds from Linux standby",
+  "started": 1792687722.7630374,
+  "request_delay_seconds": 0.25487780570983887,
+  "foreground_delay_seconds": 0.6106655597686768,
+  "pacat_exit": 0
+}

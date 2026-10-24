@@ -1,0 +1,77 @@
+[
+  {
+    "path": "BudsMsgFmtDynamic.disassembly.txt",
+    "bytes": 114994,
+    "sha256": "fbf612e45416710a3ef8f4e6e765794ddd026e53f18f31f7cabea485c511da18"
+  },
+  {
+    "path": "BudsMsgFmtDynamic.headers.txt",
+    "bytes": 29111,
+    "sha256": "4994fb24a63e3b1a512fb097ee9cafc134c984f3358050b9bcb9ed7f882eeadf"
+  },
+  {
+    "path": "DllBudsMsgFmt.disassembly.txt",
+    "bytes": 111718,
+    "sha256": "4bd0563e48dc2407213d59b386f3d909e7038c45fcf0c39e73d6624b5eaff9a3"
+  },
+  {
+    "path": "DllBudsMsgFmt.headers.txt",
+    "bytes": 26485,
+    "sha256": "628c96988674113786ada46a0067a6af1984b28513a5b29f757dbedecc8cc1a5"
+  },
+  {
+    "path": "EasyConnectLib.il",
+    "bytes": 3120393,
+    "sha256": "9d9b147e4612da0a8d062063c94088862fd149f4d731f372bae3cc98b10a4fc3"
+  },
+  {
+    "path": "easyconnect-rea.json",
+    "bytes": 10809,
+    "sha256": "ea562e23267c6cc21e22acc0366195043ddcdc1c460f5983f3f8e063cd91d87e"
+  },
+  {
+    "path": "native-builder-byte-comparison.json",
+    "bytes": 526,
+    "sha256": "ed925f8c9ceb0167568ae1fc4189a67907cd12b51cd79595239490a5393aa2a8"
+  },
+  {
+    "path": "peer-SCCloudService.il",
+    "bytes": 3977439,
+    "sha256": "f10b33bbdecda822fd5e83c1dc1355c693e00739309af61bc3e68f032f2c9b4c"
+  },
+  {
+    "path": "peer-sc-artifact.json",
+    "bytes": 229,
+    "sha256": "e6574145b267296742bbe3ca138f5e0b1588e8386f694fe7a836eb042fb4d36f"
+  },
+  {
+    "path": "peer-sc-async-rea.json",
+    "bytes": 7611,
+    "sha256": "5c4b0ae6063416bbbd6e29cf4bedcd40eb9417d1d966a9886627dfe044e8786f"
+  },
+  {
+    "path": "peer-sc-findings.md",
+    "bytes": 4280,
+    "sha256": "d55bc88a629f795ff19250d6ed95645ea80f2749cf8fc17fd24520efc17bf480"
+  },
+  {
+    "path": "peer-sc-rea.json",
+    "bytes": 12728,
+    "sha256": "960f35303a5a41ad192d253c22c973ba0ad8790c1e5d4506bcf3437e0b5b7ad5"
+  },
+  {
+    "path": "ui-BudsInfoService-findings.md",
+    "bytes": 4128,
+    "sha256": "e87236c9f4dc6154dc1ccab8f3174766066b25fdfc6d72cca1622520a4ecb3af"
+  },
+  {
+    "path": "ui-BudsInfoService-metadata.json",
+    "bytes": 6962,
+    "sha256": "37a53b0fc2ed2c2c98c84931678534e8260d61cc70d14490dd015f9f68f06a05"
+  },
+  {
+    "path": "ui-BudsInfoService.il",
+    "bytes": 852995,
+    "sha256": "b558eb3cf97e6cc4f0c260ccf7cb82c905e36113f50fc3b8a47aba4a1adc18fd"
+  }
+]
