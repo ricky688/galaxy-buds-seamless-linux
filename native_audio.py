@@ -40,6 +40,7 @@ class Endpoints:
                                                "sink_properties=device.description=BudsSwitchWait").strip()
             self.fallback = next(s for s in json.loads(audio.pactl("-f", "json", "list", "sinks"))
                                  if s["name"] == name)
+            audio.pactl("set-sink-volume", name, "100%")
             self.managed.add(self.fallback["index"])
             self.monitor(self.fallback)
         except Exception:
