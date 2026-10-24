@@ -1,7 +1,0 @@
-{
-  "source_sha256": "d05aa9f39a744dc3fb3fdd757a4e097e17cd078fb10e19d15d8f72b1cdde60ed",
-  "il_sha256": "16839af50e695e77707fdbc1dba4dde5bb42502e45399929865a7b9fb4294209",
-  "tool": "ikdasm",
-  "kind": "offline CIL decoding",
-  "lines": 239744
-}

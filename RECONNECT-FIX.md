@@ -1,9 +1,0 @@
-# SMEP recovery fix — 2026-10-23
-
-The previous worker left its audio context and quit when the Buds closed/reset its SMEP socket, including BlueZ RequestDisconnection. The seamless worker now keeps its private waiting sink alive, parks managed streams there, disables old state callbacks and clears partial packets before reconnecting. Retries use 1/2/4/8/15-second capped backoff and stop when the process is stopped. Probe/take retain one-shot behavior.
-
-After reconnect, host settings and MDE v3 are resent before connecting A2DP. The current Buds sink/index is refreshed and policy state is recreated. The existing 100 ms media qualification, 250 ms cooldown and overlapping request/audio startup are unchanged. Recovery itself sends no foreground request. Initial control-connect errors now retry without process churn; fatal initialization/audio errors can still use systemd Restart=on-failure.
-
-Validation: 33 offline tests pass. Live controlled DisconnectProfile(SMEP UUID) at 11:07:53 HKT recovered at 11:07:55.720, about 2.36 seconds after control-lost. PID remained 115078; exactly one private waiting sink was present and was still default immediately after recovery. The retained log shows host settings and MDE initialization and no foreground-request packet during recovery. See evidence/reconnect-live-01.json. The updated temporary buds-native-test.service remains running; login startup was not enabled.
-
-Scope: control-only disconnect verified. Complete radio loss, case cycles, BlueZ daemon restart and long-term recovery are not established by this run. PipeWire can apply its own fallback when an active Bluetooth audio sink disappears; this test does not prove zero acoustic leakage for every full radio-loss race. Four-host coexistence and the separate Windows three-device disconnection remain unresolved.

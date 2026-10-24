@@ -1,7 +1,0 @@
-{
-  "test": "quiet local audio from Linux standby; not active phone playback",
-  "started": 1792687547.8742282,
-  "request_delay_seconds": 0.2714400291442871,
-  "foreground_delay_seconds": 0.4414255619049072,
-  "pacat_exit": 0
-}
