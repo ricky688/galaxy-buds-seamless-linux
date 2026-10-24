@@ -1,10 +1,11 @@
 [Unit]
 Description=Galaxy Buds native seamless switching
-After=pipewire-pulse.service
+After=pipewire-pulse.service bluetooth.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python /home/user/Antigravity_project/REA/buds-switch-linux/buds_switch.py seamless AA:BB:CC:DD:EE:FF
+# Replace /path/to/galaxy-buds-seamless-linux and AA:BB:CC:DD:EE:FF with your actual directory and Buds MAC address
+ExecStart=/usr/bin/python3 /path/to/galaxy-buds-seamless-linux/buds_switch.py seamless AA:BB:CC:DD:EE:FF
 Restart=on-failure
 RestartSec=3
 TimeoutStopSec=30
