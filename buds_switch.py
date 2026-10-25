@@ -237,6 +237,13 @@ class Profile(dbus.service.Object):
                         endpoints.select(endpoints.buds)
                         endpoints.suspend_buds(False)
                         endpoints.monitor(endpoints.buds)
+                    elif action == "call-priority":
+                        # Phone call has absolute top priority: immediately release Buds to phone
+                        endpoints.mute_fallback(True)
+                        endpoints.select(endpoints.fallback)
+                        endpoints.suspend_buds(True)
+                        endpoints.monitor(endpoints.fallback)
+                        emit("phone-call-priority", flags=policy.status.get("stream_flags", 0) if policy.status else 0)
                     else:
                         endpoints.mute_fallback(True)
                         endpoints.select(endpoints.fallback)
@@ -248,9 +255,20 @@ class Profile(dbus.service.Object):
 
                 def changed(status):
                     previous = policy.status
+                    is_call = bool(status.get("stream_flags", 0) & 0x12)
                     apply(policy.state(status, time.monotonic()))
                     if previous and previous["role"] == 0 and status["role"] == 1:
-                        # Restore the parked A2DP profile without requesting foreground audio.
+                        # Restore the parked A2DP profile only if NOT in a phone call!
+                        if not is_call:
+                            try:
+                                self.connect_audio()
+                                emit("background-audio-connected")
+                            except dbus.DBusException as error:
+                                emit("background-audio-error", message=str(error))
+                        else:
+                            emit("call-active-suppress-a2dp")
+                    elif previous and (previous.get("stream_flags", 0) & 0x12) and not is_call and status["role"] == 1:
+                        # Phone call ended while Linux is in background; now safe to restore parked A2DP profile.
                         try:
                             self.connect_audio()
                             emit("background-audio-connected")

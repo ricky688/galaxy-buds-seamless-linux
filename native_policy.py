@@ -1,4 +1,4 @@
-"""Native AutoSwitch policy for Linux media activation timing."""
+"""Native AutoSwitch policy for Linux media activation timing and call priority."""
 
 
 class Policy:
@@ -18,6 +18,23 @@ class Policy:
             return None
         previous = self.status
         self.status = status
+
+        is_call = bool(status.get("stream_flags", 0) & 0x12)
+        if is_call:
+            # Phone call (HFP or CIS call) has absolute priority.
+            # Immediately yield foreground, suppress auto-switch requests, and clear deadlines.
+            self.standby = True
+            self.monitor = False
+            self.request_deadline = None
+            self.idle_deadline = None
+            self.sound_since = None
+            self.quiet_since = None
+            return "call-priority"
+
+        if previous and (previous.get("stream_flags", 0) & 0x12) and not is_call:
+            # Phone call ended; start handoff cooldown.
+            self.lost_at = now
+
         if self.standby and status["foreground"] and self.request_deadline is None:
             return None
         self.standby = False
@@ -35,8 +52,8 @@ class Policy:
         if status["stream_flags"] == 0:
             self.idle_deadline = now + 2
             return None
-        self.monitor = not bool(status["stream_flags"] & 0x12)  # HFP or CIS call
-        if self.monitor and previous and previous["foreground"] and previous["stream_flags"]:
+        self.monitor = True
+        if previous and previous["foreground"] and previous["stream_flags"]:
             self.lost_at = now
         return "fallback-muted"
 

@@ -9,6 +9,7 @@ It maintains Samsung’s proprietary **SMEP** (Samsung Multi-point Endpoint Prot
 
 - **True Native Protocol**: Uses Samsung's MDE v3 / SMEP protocol over RFCOMM rather than basic Bluetooth reconnection hacks.
 - **Fast Handoff (< 300 ms)**: Overlaps A2DP endpoint startup with the native request for instant audio playback.
+- **Phone Call Priority**: Gives phone calls absolute precedence—immediately yields the Buds to incoming or active phone calls (HFP / CIS calls), suspending Linux A2DP audio and suppressing auto-switch requests until the call ends.
 - **No Speaker Leaks**: Redirects background Linux audio to a private `BudsSwitchWait` virtual sink when the phone owns the Buds.
 - **Zero-Touch Return to Mobile**: Automatically yields the Buds back to the phone after 2 seconds of local Linux silence.
 - **Self-Healing Connection**: Automatically handles remote socket resets with an exponential backoff (`1s -> 2s -> 4s -> 8s -> 15s`).
@@ -72,6 +73,7 @@ python3 buds_switch.py seamless <YOUR_BUDS_MAC>
 
 Leave this command running in the background or terminal:
 - **Phone playing audio**: Linux remains quietly in the background; phone audio plays continuously.
+- **Incoming / Active Phone Call**: Phone calls take absolute precedence. Linux immediately yields audio, suspends the Buds sink, and suppresses takeover requests so you can answer and converse on your phone without interruption.
 - **Play audio on Linux**: When Linux plays sound (> 100 ms), it automatically requests foreground and takes over playback.
 - **Stop audio on Linux**: After 2 seconds of silence, Linux automatically yields and the phone resumes playback.
 
